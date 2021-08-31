@@ -3,19 +3,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<meta name="Description" content="Xtreme Fitness - Everything your body needs"/>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-<link rel="stylesheet" href="assets/css/style.css">
-<title>Xtreme Fitness</title>
+      {% block meta %}
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta http-equiv="X-UA-Compatible" content="ie=edge">
+            <meta name="Description" content="Xtreme Fitness - Everything your body needs"/>
+      {% endblock %}
+
+      {% block extra_meta %}
+      {% endblock %}
+
+      {% block corecss%}
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+      {% endblock %}
+
+      {% block extra_css %}
+            <link rel="stylesheet" href="assets/css/style.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+      {% endblock %}
+
+      
+      <title>Xtreme Fitness {% block extra_title %}{% endblock %}</title>
 </head>
 <body>
+      <header class="container-fluid"></header>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+      {% if messages %}
+            <div class="message-container"></div>
+      {% endif %}
+
+
+      {% block page_header %}
+      {% endblock %}
+
+      {% block content %}
+      {% endblock %}
+
+      {% block postloadjs %}
+      {% endblock %}
+
+
+
+
+
+
+
+
+      {% block corejs%}
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+      {% endblock %}
+
+      {% block extra_js %}
+      {% endblock %}
 </body>
 </html>
