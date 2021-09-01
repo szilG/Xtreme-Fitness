@@ -2,34 +2,103 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
       {% block meta %}
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <meta http-equiv="X-UA-Compatible" content="ie=edge">
-            <meta name="Description" content="Xtreme Fitness - Everything your body needs"/>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <meta name="Description" content="Xtreme Fitness - Everything your body needs" />
       {% endblock %}
 
       {% block extra_meta %}
       {% endblock %}
 
       {% block corecss%}
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+      <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
       {% endblock %}
 
       {% block extra_css %}
-            <link rel="stylesheet" href="assets/css/style.css">
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+      <link rel="stylesheet" href="assets/css/style.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
       {% endblock %}
 
-      
+
       <title>Xtreme Fitness {% block extra_title %}{% endblock %}</title>
 </head>
+
 <body>
-      <header class="container-fluid"></header>
+      <header class="container-fluid">
+            <div class="row mt-4">
+                  <div class="col-3 my-auto top-bar">
+                        Welcome to <strong>X</strong>treme Fitness
+                  </div>
+                  <div class="col-9 ml-auto my-auto text-center">
+                        <i class="fas fa-location-arrow"></i>27 DivisionSt, New York, USA |
+                        <i class="fas fa-phone-alt"></i> +1(044)123 456 789 |
+                        <i class="far fa-envelope"></i> info@example.com
+                  </div>
+            </div>
+            
+            <div class="container-fluid">
+                  <div class="row">
+                        <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 d-flex text-center text-lg-left navbar-brand">
+                              <a href="{% url 'home' %}" class="nav-link d-flex">
+                                    <img src="" alt="logo">
+                                    <h2>XF</h2>
+                              </a>
+                        </div>
+
+                     
+
+                        <div class="col-12 col-lg-4 my-auto ml-auto py-1 py-lg-0">
+                              <ul class="list-inline list-unstyled text-center text-lg-right my-0">
+                                    <li class="list-inline-item dropdown">
+                                          <a class="text-black nav-link" href="#" id="user-options"
+                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <div class="text-center">
+                                                      <div><i class="fas fa-user fa-lg"></i></div>
+                                                      <p class="my-0">My Account</p>
+                                                </div>
+                                          </a>
+                                          <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                                                {% if request.user.is_authenticated %}
+                                                {% if request.user.is_superuser %}
+                                                <a href="" class="dropdown-item">Product Management</a>
+                                                {% endif %}
+                                                <a href="" class="dropdown-item">My Profile</a>
+                                                <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                                                {% else %}
+                                                <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                                                <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                                                {% endif %}
+                                          </div>
+                                    </li>
+                                    <li class="list-inline-item">
+                                          <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
+                                                href="">
+                                                <div class="text-center">
+                                                      <div><i class="fas fa-shopping-bag fa-lg"></i></div>
+                                                      <p class="my-0">
+                                                            {% if grand_total %}
+                                                            ${{ grand_total|floatformat:2 }}
+                                                            {% else %}
+                                                            $0.00
+                                                            {% endif %}
+                                                      </p>
+                                                </div>
+                                          </a>
+                                    </li>
+                              </ul>
+                        </div>
+                  </div>
+            </div>
+
+      </header>
 
       {% if messages %}
-            <div class="message-container"></div>
+      <div class="message-container"></div>
       {% endif %}
 
 
@@ -50,12 +119,13 @@
 
 
       {% block corejs%}
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
       {% endblock %}
 
       {% block extra_js %}
       {% endblock %}
 </body>
+
 </html>
