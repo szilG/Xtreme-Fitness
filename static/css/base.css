@@ -28,16 +28,64 @@ body {
       color: #ff0000;
 }
 
+.left-icons-mobil {
+      color: #fff;
+      font-size: 11px;
+      padding-top: 5px;
+}
+
+.left-icons-mobil i {
+      color: #ff0000;
+}
+
+.left-icons-mobil a {
+      color: #fff;
+}
+
+.left-icons-mobil a:hover {
+      color: #ff0000;
+}
+
+.left-icons-mobil span {
+      color: #ff0000;
+      font-size: 12px;
+}
+
 .navbar-brand h2 span{
-      font-size: 50px;
+      font-size: 20px;
       color: #ff0000;
 }
 
 .navbar-brand h2 {
       font-weight: 700;
-      font-size: 40px;
+      font-size: 16px;
       color: #fff;
 }
+
+.nav-item {
+      padding: 0 10px;
+}
+
+.nav-item a {
+      color: #fff;
+}
+
+.nav-item a:hover,
+.navitem a:focus {
+      color: #ff0000;
+}
+
+.dropdown-menu {
+      background: transparent !important;
+      border: 1px solid rgb(27, 27, 27);
+      border-radius: 8px;
+}
+
+.navbar-toggler-icon i {
+      color: #fff;
+      font-size: 23px;
+}
+
 
 /*===================HOME==================*/
 
@@ -46,7 +94,6 @@ body {
 .carousel-item.active {
       transition: transform 1.2s ease;
 }
-
 .carousel-caption {
       position: absolute;
       top: 54%;
@@ -56,7 +103,7 @@ body {
 .bg-custom h1 {
       font-size: 16px;
       text-transform: uppercase;
-      letter-spacing: .3rem;   
+      letter-spacing: .3rem; 
 }
 
 .bg-custom h2,span {
@@ -64,14 +111,10 @@ body {
       font-weight: 500;
 }
 
-.bg-custom span {
-      color: #ff0000;
-}
-
 .bg-custom p {
       font-size: 20px;
       letter-spacing: .3rem;
-}
+}  
 
 .btn-lg {
       background: none;
@@ -79,4 +122,83 @@ body {
       border-radius: 0;
       color: #fff;
       font-size: 12px;
+}
+
+
+/*=================Media queries===================*/
+
+@media (min-width: 1200px) {
+      .container {
+        max-width: 80%;
+      }
+    }
+    
+    /* fixed top navbar only on medium and up */
+@media (min-width: 992px) {
+      .fixed-top-desktop-only {
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      z-index: 1030;
+      }
+      .header-container {
+      padding-top: 164px;
+      }
+      .navbar-brand h2 span{
+            font-size: 50px;
+            color: #ff0000;
+      }
+      
+      .navbar-brand h2 {
+            font-weight: 700;
+            font-size: 40px;
+            color: #fff;
+      }
+}
+@media (max-width: 992px) {
+      .header-bg-black-mobil {
+            background: #000;
+      }
+}
+
+@media (max-width: 768px) {
+      .carousel-caption {
+            top: 40%;
+      }
+      
+      .bg-custom h1 {
+            font-size: 16px;
+      }
+      
+      .bg-custom h2 {
+            font-size: 30px;
+            font-weight: 500;
+      }
+      .bg-custom p {
+            font-size: 20px;
+      }  
+}
+
+@media (max-width: 599px) {
+      .carousel-caption {
+            top: 30%;
+      }
+      
+      .bg-custom h1 {
+            font-size: 16px;
+      }
+      
+      .bg-custom h2,span {
+            font-size: 15px;
+      }
+      .bg-custom p {
+            font-size: 12px;
+      }
+}
+
+@media (max-width: 359px) {
+      .carousel-caption {
+            display: none;
+      }
 }
