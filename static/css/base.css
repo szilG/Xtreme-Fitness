@@ -1,0 +1,82 @@
+html {
+      height: 100%;
+}
+
+body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      overflow-x: hidden;
+      
+}
+
+#topbar {
+      color: #fff;
+      font-size: 12px;
+}
+
+#topbar a {
+      text-decoration: none;
+      color: #fff;
+}
+
+#topbar a:hover {
+      color: #ff0000;
+}
+
+#topbar .left-icons i{
+      color: #ff0000;
+}
+
+.navbar-brand h2 span{
+      font-size: 50px;
+      color: #ff0000;
+}
+
+.navbar-brand h2 {
+      font-weight: 700;
+      font-size: 40px;
+      color: #fff;
+}
+
+/*===================HOME==================*/
+
+.carousel-item-next,
+.carousel-item-prev,
+.carousel-item.active {
+      transition: transform 1.2s ease;
+}
+
+.carousel-caption {
+      position: absolute;
+      top: 54%;
+      transform: translateY(-50%);
+}
+
+.bg-custom h1 {
+      font-size: 16px;
+      text-transform: uppercase;
+      letter-spacing: .3rem;   
+}
+
+.bg-custom h2,span {
+      font-size: 50px;
+      font-weight: 500;
+}
+
+.bg-custom span {
+      color: #ff0000;
+}
+
+.bg-custom p {
+      font-size: 20px;
+      letter-spacing: .3rem;
+}
+
+.btn-lg {
+      background: none;
+      border: 1px solid #fff;
+      border-radius: 0;
+      color: #fff;
+      font-size: 12px;
+}

@@ -17,84 +17,86 @@
       {% block corecss%}
       <link rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+      <link rel="stylesheet" href="{% static 'css/base.css' %}">
       {% endblock %}
 
       {% block extra_css %}
-      <link rel="stylesheet" href="assets/css/style.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
       {% endblock %}
 
+      {% block corejs%}
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+      {% endblock %}
+
+      {% block extra_js %}
+      {% endblock %}
 
       <title>Xtreme Fitness {% block extra_title %}{% endblock %}</title>
 </head>
 
 <body>
-      <header class="container-fluid">
-            <div class="row mt-4">
-                  <div class="col-3 my-auto top-bar">
-                        Welcome to <strong>X</strong>treme Fitness
+      <header class="container-fluid fixed-top">
+            <div id="topbar" class="row pt-lg-2 d-none d-lg-flex">
+                  <div class="col-8 my-auto left-icons">
+                        <i class="fas fa-location-arrow pr-2 pl-2"></i>27 DivisionSt, New York, USA |
+                        <i class="fas fa-phone-alt pr-2 pl-2"></i><a href="tel:+1044123456789"> +1(044)123 456 789 |</a>
+                        <i class="far fa-clock pr-2 pl-2"></i>Mon-Sun: 6AM - 11PM |  
                   </div>
-                  <div class="col-9 ml-auto my-auto text-center">
-                        <i class="fas fa-location-arrow"></i>27 DivisionSt, New York, USA |
-                        <i class="fas fa-phone-alt"></i> +1(044)123 456 789 |
-                        <i class="far fa-envelope"></i> info@example.com
-                  </div>
-            </div>
-            
-            <div class="container-fluid">
-                  <div class="row">
-                        <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 d-flex text-center text-lg-left navbar-brand">
-                              <a href="{% url 'home' %}" class="nav-link d-flex">
-                                    <img src="" alt="logo">
-                                    <h2>XF</h2>
-                              </a>
-                        </div>
-
-                     
-
-                        <div class="col-12 col-lg-4 my-auto ml-auto py-1 py-lg-0">
-                              <ul class="list-inline list-unstyled text-center text-lg-right my-0">
-                                    <li class="list-inline-item dropdown">
-                                          <a class="text-black nav-link" href="#" id="user-options"
-                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                <div class="text-center">
-                                                      <div><i class="fas fa-user fa-lg"></i></div>
-                                                      <p class="my-0">My Account</p>
-                                                </div>
-                                          </a>
-                                          <div class="dropdown-menu border-0" aria-labelledby="user-options">
-                                                {% if request.user.is_authenticated %}
-                                                {% if request.user.is_superuser %}
-                                                <a href="" class="dropdown-item">Product Management</a>
-                                                {% endif %}
-                                                <a href="" class="dropdown-item">My Profile</a>
-                                                <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
-                                                {% else %}
-                                                <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                                                <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
-                                                {% endif %}
+                  <div class="col-12 col-lg-4 my-auto ml-auto py-1 py-lg-0">
+                        <ul class="list-inline list-unstyled text-center text-lg-right my-0">
+                              <li class="list-inline-item dropdown">
+                                    <a class="text-black nav-link" href="#" id="user-options"
+                                          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                          <div class="text-center">
+                                                <div><i class="fas fa-user"></i></div>
+                                                <p class="my-0">My Account</p>
                                           </div>
-                                    </li>
-                                    <li class="list-inline-item">
-                                          <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
-                                                href="">
-                                                <div class="text-center">
-                                                      <div><i class="fas fa-shopping-bag fa-lg"></i></div>
-                                                      <p class="my-0">
-                                                            {% if grand_total %}
-                                                            ${{ grand_total|floatformat:2 }}
-                                                            {% else %}
-                                                            $0.00
-                                                            {% endif %}
-                                                      </p>
-                                                </div>
-                                          </a>
-                                    </li>
-                              </ul>
-                        </div>
-                  </div>
+                                    </a>
+                                    <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                                          {% if request.user.is_authenticated %}
+                                          {% if request.user.is_superuser %}
+                                          <a href="" class="dropdown-item">Product Management</a>
+                                          {% endif %}
+                                          <a href="" class="dropdown-item">My Profile</a>
+                                          <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                                          {% else %}
+                                          <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                                          <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                                          {% endif %}
+                                    </div>
+                              </li>
+                              <li class="list-inline-item">
+                                    <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
+                                          href="">
+                                          <div class="text-center">
+                                                <div><i class="fas fa-shopping-bag"></i></div>
+                                                <p class="my-0">
+                                                      {% if grand_total %}
+                                                      ${{ grand_total|floatformat:2 }}
+                                                      {% else %}
+                                                      $0.00
+                                                      {% endif %}
+                                                </p>
+                                          </div>
+                                    </a>
+                              </li>
+                        </ul>
+                  </div> 
             </div>
 
+            <div id="topnav" class="row pt-lg-2 d-none d-lg-flex">
+                  <div class="col-6 navbar-brand">
+                        <h2><span>X</span>treme Fitness Club |</h2>
+                        <!-- <a href="{% url 'home' %}" class="nav-link p-0 d-flex">
+                              <img src="{% static 'logo-white.png' %}" width="53" height="38" alt="logo">
+                              <h2>X<span>F</span> </h2>
+                        </a> -->
+                  </div>
+
+                  <!-- my-auto py-0 py-lg-0       -->
+            </div>
       </header>
 
       {% if messages %}
@@ -118,14 +120,7 @@
 
 
 
-      {% block corejs%}
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
-      {% endblock %}
-
-      {% block extra_js %}
-      {% endblock %}
+      
 </body>
 
 </html>
