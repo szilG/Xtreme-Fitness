@@ -125,6 +125,10 @@ body {
 }
 
 
+/*===============Products======================*/
+.header-bg-black-mobil {
+      background: #000;
+}
 /*=================Media queries===================*/
 
 @media (min-width: 1200px) {
@@ -154,11 +158,6 @@ body {
             font-weight: 700;
             font-size: 40px;
             color: #fff;
-      }
-}
-@media (max-width: 992px) {
-      .header-bg-black-mobil {
-            background: #000;
       }
 }
 
