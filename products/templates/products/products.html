@@ -4,6 +4,27 @@
 
 
 {% block content %}
+      <div class=" p-img">
+            <img src="{% static 'p-h01.jpg' %}" alt="fitness women" class="w-100 img-fluid">
+
+            <div class="col-6 offset-3 search">
+                  <form method="GET" action="{% url 'products' %}">
+                      <div class="input-group w-100 ">
+                          <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="Search our site">
+                          <div class="input-group-append">
+                              <button class="form-control border border-black rounded-0" type="submit">
+                                  <span class="">
+                                      <i class="fas fa-search"></i>
+                                  </span>
+                              </button>
+                          </div>
+                      </div>
+                  </form>
+              </div>
+      </div>
+      
+            
+      
       <div class="container-fluid mt-5 pt-5">
             <div class="row">
                   <div class="col text-center mt-3">
@@ -19,11 +40,11 @@
                                     <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                                           <div class="card h-100 border-0">
                                                 {% if product.image %}
-                                                      <a href="">
+                                                      <a href="{% url 'product_detail' product.id %}">
                                                             <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
                                                       </a>
                                                 {% else %}
-                                                      <a href="">
+                                                      <a href="{% url 'product_detail' product.id %}">
                                                             <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
                                                       </a>
                                                 {% endif %}
@@ -34,7 +55,7 @@
                                                 <div class="card-footer bg-white pt-0 border-0 text-left">
                                                       <div class="row">
                                                             <div class="col">
-                                                                  <p class="lead mb-0 text-left font-weight-bold">${{ product.price }}</p>
+                                                                  <p class="lead mb-0 text-left font-weight-bold">€{{ product.price }}</p>
                                                                   {% if product.rating %}
                                                                         <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
                                                                   {% else %}

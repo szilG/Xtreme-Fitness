@@ -106,7 +106,7 @@ body {
       letter-spacing: .3rem; 
 }
 
-.bg-custom h2,span {
+.bg-custom h2 {
       font-size: 50px;
       font-weight: 500;
 }
@@ -126,8 +126,21 @@ body {
 
 
 /*===============Products======================*/
-.header-bg-black-mobil {
+.header-bg-black {
       background: #000;
+}
+.p-img img {
+      width: 100%;
+      top: 0;
+      left: 0;
+}
+
+.search {
+      margin-top: -50px;
+}
+
+.search i {
+      color: #ff0000;
 }
 /*=================Media queries===================*/
 
