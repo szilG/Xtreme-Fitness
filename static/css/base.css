@@ -157,6 +157,23 @@ body {
       left: 0;
 }
 
+a.category-badge {
+      color: #000;
+}
+
+span.badge:hover {
+      color: #ff0000;
+}
+
+.product-category a {
+      text-decoration: none;
+      color: #000;
+}
+
+.product-category a:hover {
+      color: #ff0000;
+}
+
 
 /*=================Media queries===================*/
 
