@@ -9,22 +9,45 @@ body {
       overflow-x: hidden;
       
 }
-
+/*========Base======*/
 #topbar {
       color: #fff;
       font-size: 12px;
 }
 
-#topbar a {
+.right-icons a {
       text-decoration: none;
       color: #fff;
 }
 
-#topbar a:hover {
+.right-icons a:hover {
       color: #ff0000;
 }
 
-#topbar .left-icons i{
+.right-icons i{
+      color: #ff0000;
+}
+
+#topbar span {
+      color: #ff0000;
+      font-weight: 900;
+}
+/*==========*/
+.search i {
+      color: #ff0000;
+}
+
+.search p {
+      color: #fff;
+      font-size: 12px;
+}
+
+.navbar-icons a{
+      color: #fff;
+      font-size: 12px;
+}
+
+.navbar-icons a:hover {
       color: #ff0000;
 }
 
@@ -76,7 +99,7 @@ body {
 }
 
 .dropdown-menu {
-      background: transparent !important;
+      background: #000;
       border: 1px solid rgb(27, 27, 27);
       border-radius: 8px;
 }
@@ -86,7 +109,9 @@ body {
       font-size: 23px;
 }
 
-
+.bg-black {
+      background: #000;
+}
 /*===================HOME==================*/
 
 .carousel-item-next,
@@ -126,29 +151,20 @@ body {
 
 
 /*===============Products======================*/
-.header-bg-black {
-      background: #000;
-}
 .p-img img {
       width: 100%;
       top: 0;
       left: 0;
 }
 
-.search {
-      margin-top: -50px;
-}
 
-.search i {
-      color: #ff0000;
-}
 /*=================Media queries===================*/
 
-@media (min-width: 1200px) {
+/* @media (min-width: 1200px) {
       .container {
         max-width: 80%;
       }
-    }
+    } */
     
     /* fixed top navbar only on medium and up */
 @media (min-width: 992px) {
@@ -159,9 +175,9 @@ body {
       left: 0;
       z-index: 1030;
       }
-      .header-container {
+      /* .header-container {
       padding-top: 164px;
-      }
+      } */
       .navbar-brand h2 span{
             font-size: 50px;
             color: #ff0000;
@@ -171,6 +187,12 @@ body {
             font-weight: 700;
             font-size: 40px;
             color: #fff;
+      }
+}
+
+@media (max-width: 992px) {
+      .header-bg-black-mobil {
+            background: #000;
       }
 }
 

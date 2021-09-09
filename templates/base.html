@@ -37,77 +37,109 @@
 </head>
 
 <body>
-      <header class="container-fluid fixed-top">
-            <div id="topbar" class="row pt-lg-2 d-none d-lg-flex">
-                  <div class="col-8 my-auto left-icons">
-                        <i class="fas fa-location-arrow pr-2 pl-2"></i>27 Patrick St, Cork, IRL |
-                        <i class="fas fa-phone-alt pr-2 pl-2"></i><a href="tel:+1044123456789"> +1(353)123 456 789 |</a>
-                        <i class="far fa-clock pr-2 pl-2"></i>Mon-Sun: 6AM - 11PM |  
+      <header>
+            <div class="container-fluid bg-black">
+                  <div id="topbar" class="row d-none d-lg-flex pt-1 pb-5">
+                        <div class="col-lg-6">
+                              <p>Welcome to <span>X</span>treme Fitness Club</p>
+                        </div>
+                        <div class="col-lg-6 right-icons ml-auto">
+                              <i class="fas fa-location-arrow pr-1 pr-xl-2 pl-1 pl-xl-2"></i>27 Patrick St, Cork, IRL |
+                              <i class="fas fa-phone-alt pr-1 pr-xl-2 pl-1 pl-xl-2"></i><a href="tel:+1044123456789"> +1(353)123 456 789 |</a>
+                              <i class="far fa-clock pr-1 pr-xl-2 pl-xl-2"></i>Mon-Sun: 6AM - 11PM |
+                        </div>
+      
                   </div>
-                  <div class="col-12 col-lg-4 my-auto ml-auto py-1 py-lg-0">
-                        <ul class="list-inline list-unstyled text-center text-lg-right my-0">
-                              <li class="list-inline-item dropdown">
-                                    <a class="text-black nav-link" href="#" id="user-options"
-                                          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                          <div class="text-center">
-                                                <div><i class="fas fa-user"></i></div>
-                                                <p class="my-0">My Account</p>
-                                          </div>
-                                    </a>
-                                    <div class="dropdown-menu border-0" aria-labelledby="user-options">
-                                          {% if request.user.is_authenticated %}
-                                          {% if request.user.is_superuser %}
-                                          <a href="" class="dropdown-item">Product Management</a>
-                                          {% endif %}
-                                          <a href="" class="dropdown-item">My Profile</a>
-                                          <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
-                                          {% else %}
-                                          <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                                          <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
-                                          {% endif %}
-                                    </div>
-                              </li>
-                              <li class="list-inline-item">
-                                    <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
-                                          href="">
-                                          <div class="text-center">
-                                                <div><i class="fas fa-shopping-bag"></i></div>
-                                                <p class="my-0">
-                                                      {% if grand_total %}
-                                                      € grand_total|floatformat:2 }}
-                                                      {% else %}
-                                                      €0.00
-                                                      {% endif %}
-                                                </p>
-                                          </div>
-                                    </a>
-                              </li>
-                        </ul>
-                  </div> 
             </div>
-
-            <div class="row">
-                  <div class="col-12 left-icons-mobil text-center d-block d-lg-none">
-                        <p>Welcome to <span>X</span>treme Fitness</p>
-                        <i class="fas fa-location-arrow pr-2 pl-2"></i>27 Patrick St, Cork, IRL |
-                        <i class="fas fa-phone-alt pr-2 pl-2"></i><a href="tel:+1044123456789"> +1(353)123 456 789 |</a>
-                        <i class="far fa-clock pr-2 pl-2"></i>Mon-Sun: 6AM - 11PM |  
+            <div class="container-fluid fixed-top-desktop-only header-bg-black-mobil">
+                  <div class="row pt-lg-4 d-none d-lg-flex">
+                        <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
+                              <a class="navbar-brand" href="{% url 'home' %}"><h2><span>X</span>treme FC |</h2></a>
+                        </div>
+                        <div class="col-12 col-lg-8 d-flex ml-auto my-auto">
+                              <div class="col-12 col-lg-8 my-auto py-1 py-lg-0 ml-auto search">
+                                    <form method="GET" action="{% url 'products' %}">
+                                        <div class="input-group w-100 ">
+                                            <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="Search our site">
+                                            <div class="input-group-append">
+                                                <button class="form-control border border-black rounded-0" type="submit">
+                                                    <span class="">
+                                                        <i class="fas fa-search"></i>
+                                                    </span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                              </div>
+                              <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 navbar-icons">
+                                    <ul class="list-inline list-unstyled text-center text-lg-right my-0">
+                                          <li class="list-inline-item dropdown">
+                                                <a class="nav-link" href="#" id="user-options"
+                                                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                      <div class="text-center">
+                                                            <div><i class="fas fa-user"></i></div>
+                                                            <p class="my-0">My Account</p>
+                                                      </div>
+                                                </a>
+                                                <div class="dropdown-menu" aria-labelledby="user-options">
+                                                      {% if request.user.is_authenticated %}
+                                                      {% if request.user.is_superuser %}
+                                                      <a href="" class="dropdown-item">Product Management</a>
+                                                      {% endif %}
+                                                      <a href="" class="dropdown-item">My Profile</a>
+                                                      <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                                                      {% else %}
+                                                      <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                                                      <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                                                      {% endif %}
+                                                </div>
+                                          </li>
+                                          <li class="list-inline-item">
+                                                <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
+                                                      href="">
+                                                      <div class="text-center">
+                                                            <div><i class="fas fa-shopping-bag"></i></div>
+                                                            <p class="my-0">
+                                                                  {% if grand_total %}
+                                                                  € grand_total|floatformat:2 }}
+                                                                  {% else %}
+                                                                  €0.00
+                                                                  {% endif %}
+                                                            </p>
+                                                      </div>
+                                                </a>
+                                          </li>
+                                    </ul>
+                              </div>
+                        </div>
+                         
                   </div>
-                  <nav class="navbar navbar-expand-lg w-100">
-                        
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                          <span class="navbar-toggler-icon">
-                              <i class="fas fa-bars"></i>
-                          </span>
-                        </button>
+      
+                  <div class="row">
+                        <div class="col-12 left-icons-mobil text-center d-block d-lg-none">
+                              <a href="{% url 'home' %}"><p>Welcome to <span>X</span>treme Fitness Club</p></a>
+                              <i class="fas fa-location-arrow pr-2 pl-2"></i>27 Patrick St, Cork, IRL |
+                              <i class="fas fa-phone-alt pr-2 pl-2"></i><a href="tel:+1044123456789"> +1(353)123 456 789 |</a>
+                              <i class="far fa-clock pr-2 pl-2"></i>Mon-Sun: 6AM - 11PM |  
+                        </div>
+                  </div>
+                  <div class="row">
+                        <nav class="navbar navbar-expand-lg w-100">
+                              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon">
+                                    <i class="fas fa-bars"></i>
+                                    </span>
+                              </button>
 
+                              {% include 'includes/mobile-top-header.html' %}
+                              {% include 'includes/main-nav.html' %}
+                        </nav>
+                  </div>
                   
-
-                        {% include 'includes/mobile-top-header.html' %}
-                        {% include 'includes/main-nav.html' %}
-                  </nav>
             </div>
       </header>
+      
+      
 
       {% if messages %}
       <div class="message-container"></div>

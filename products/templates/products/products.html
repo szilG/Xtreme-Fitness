@@ -7,20 +7,7 @@
       <div class=" p-img">
             <img src="{% static 'p-h01.jpg' %}" alt="fitness women" class="w-100 img-fluid">
 
-            <div class="col-6 offset-3 search">
-                  <form method="GET" action="{% url 'products' %}">
-                      <div class="input-group w-100 ">
-                          <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="Search our site">
-                          <div class="input-group-append">
-                              <button class="form-control border border-black rounded-0" type="submit">
-                                  <span class="">
-                                      <i class="fas fa-search"></i>
-                                  </span>
-                              </button>
-                          </div>
-                      </div>
-                  </form>
-              </div>
+            
       </div>
       
             
@@ -28,7 +15,7 @@
       <div class="container-fluid mt-5 pt-5">
             <div class="row">
                   <div class="col text-center mt-3">
-                        <h2>Products</h2>
+                        <h2>{{ products.category.name }}</h2>
                         <hr class="w-50 mb-1">
                   </div>
             </div>
