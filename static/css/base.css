@@ -185,6 +185,17 @@ span.badge:hover {
       color: #ff0000;
 }
 
+.btn-outline-black {
+      background: white;
+      color: black !important;
+      border: 1px solid black;
+}
+
+.btn-black {
+      background: #000;
+      color: #fff !important;
+}
+
 
 /*=================Media queries===================*/
 
