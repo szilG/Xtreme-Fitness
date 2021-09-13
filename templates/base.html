@@ -50,6 +50,14 @@
                         </div>
       
                   </div>
+                  <div class="row">
+                        <div class="col-12 left-icons-mobil text-center d-block d-lg-none">
+                              <a href="{% url 'home' %}"><p>Welcome to <span>X</span>treme Fitness Club</p></a>
+                              <i class="fas fa-location-arrow pr-2 pl-2"></i>27 Patrick St, Cork, IRL |
+                              <i class="fas fa-phone-alt pr-2 pl-2"></i><a href="tel:+1044123456789"> +1(353)123 456 789 |</a>
+                              <i class="far fa-clock pr-2 pl-2"></i>Mon-Sun: 6AM - 11PM |  
+                        </div>
+                  </div>
             </div>
             <div class="container-fluid fixed-top-desktop-only header-bg-black-mobil">
                   <div class="row pt-lg-4 d-none d-lg-flex">
@@ -112,16 +120,6 @@
                                     </ul>
                               </div>
                         </div>
-                         
-                  </div>
-      
-                  <div class="row">
-                        <div class="col-12 left-icons-mobil text-center d-block d-lg-none">
-                              <a href="{% url 'home' %}"><p>Welcome to <span>X</span>treme Fitness Club</p></a>
-                              <i class="fas fa-location-arrow pr-2 pl-2"></i>27 Patrick St, Cork, IRL |
-                              <i class="fas fa-phone-alt pr-2 pl-2"></i><a href="tel:+1044123456789"> +1(353)123 456 789 |</a>
-                              <i class="far fa-clock pr-2 pl-2"></i>Mon-Sun: 6AM - 11PM |  
-                        </div>
                   </div>
                   <div class="row">
                         <nav class="navbar navbar-expand-lg w-100">
@@ -133,9 +131,9 @@
 
                               {% include 'includes/mobile-top-header.html' %}
                               {% include 'includes/main-nav.html' %}
+                              
                         </nav>
                   </div>
-                  
             </div>
       </header>
       
