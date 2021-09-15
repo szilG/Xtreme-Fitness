@@ -196,6 +196,20 @@ span.badge:hover {
       color: #fff !important;
 }
 
+.increment-qty {
+      border: none;
+      background: none;
+      color: #ff0000;
+      margin-left: 15px;
+}
+
+.decrement-qty {
+      border: none;
+      background: none;
+      color: #ff0000;
+      margin-right: 15px; 
+}
+
 
 /*=================Media queries===================*/
 

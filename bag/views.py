@@ -19,10 +19,15 @@ def add_to_bag(request, item_id):
     bag = request.session.get('bag', {})
 
     if size:
+        """if item in the bag"""
         if item_id in list(bag.keys()):
+            """check another item of the same id
+             and same size already exists"""
             if size in bag[item_id]['items_by_size'].keys():
+                """Increment the quantity for that size """
                 bag[item_id]['items_by_size'][size] += quantity
             else:
+                """set it equal to the quantity"""
                 bag[item_id]['items_by_size'][size] = quantity
         else:
             bag[item_id] = {'items_by_size': {size: quantity}}
