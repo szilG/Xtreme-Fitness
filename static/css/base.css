@@ -114,15 +114,25 @@ body {
 }
 
 .btt-button {
+      z-index: 1001;
       width: 42px;
       height: 42px;
       position: fixed;
       bottom: 10px;
       right: 10px;
+      background: #ff0000;
+      border: none;
 }
 
-.btt-linl {
+.btt-button a {
+      color: #fff;
+}
+
+.btt-link,
+.update-link,
+.remove-item {
       cursor: pointer;
+
 }
 /*===================HOME==================*/
 .carousel-item-next,
@@ -185,10 +195,14 @@ span.badge:hover {
       color: #ff0000;
 }
 
-.btn-outline-black {
-      background: white;
-      color: black !important;
-      border: 1px solid black;
+.btn-outline-red {
+      color: #ff0000 !important;
+      border: 1px solid #ff0000 !important;
+}
+
+.btn-red {
+      background: #ff0000;
+      color: #fff;
 }
 
 .btn-black {
@@ -200,14 +214,14 @@ span.badge:hover {
       border: none;
       background: none;
       color: #ff0000;
-      margin-left: 15px;
+      margin-left: 10px;
 }
 
 .decrement-qty {
       border: none;
       background: none;
       color: #ff0000;
-      margin-right: 15px; 
+      margin-right: 10px; 
 }
 
 
@@ -264,6 +278,18 @@ span.badge:hover {
       }
       .bg-custom p {
             font-size: 20px;
+      }
+      .gym-para {
+            font-size: 15px;
+      }
+      .increment-qty {
+            margin-left: 0;
+            padding: 2px;
+      }
+      
+      .decrement-qty {
+            margin-right: 0;
+            padding: 2px;
       }  
 }
 
@@ -282,6 +308,24 @@ span.badge:hover {
       .bg-custom p {
             font-size: 12px;
       }
+      .gym-para {
+            font-size: 13px;
+      }
+}
+@media (max-width: 450px){
+      .update-link,
+      .remove-item {
+            font-size: 9px;
+      }
+}
+@media (max-width: 399px) {
+      .gym-para {
+            font-size: 10px;
+      }
+      .checkout-btn {
+            margin-top: 10px;
+      }
+      
 }
 
 @media (max-width: 359px) {
