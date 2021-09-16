@@ -1,0 +1,37 @@
+{% load bag_tools %}
+<div class="toast custom-toast rounded-0 border-top-0" data-autohide="false">
+    <div class="arrow-up arrow-success"></div>
+    <div class="w-100 toast-capper bg-success"></div>
+    <div class="toast-header bg-white text-dark">
+        <strong class="mr-auto">Success!</strong>
+        <button type="button" class="ml-2 mb-1 close text-dark" data-dismiss="toast" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    
+    <div class="row toast-body bg-white">
+    {% for item in bag_items %}
+        <div class="col-3 w-25 mt-1">
+        <img class="img-fluid rounded" src="{{ item.product.image.url }}">
+        </div>
+        <div class="col-3 mt-1">
+        <p class="my-0"><small>{{ item.product.name }}</small></p>
+        </div>
+        <div class="col-3 mt-1">
+        <p class="my-0">Size: {% if item.product.has_sizes %}{{ item.size|upper }}{% else %}N/A{% endif %}</p>
+        <p>Qty: {{ item.quantity }}</p>
+        </div>
+        <div class="col-3 mt-1">
+        <p class="my-0">€{{ item.product.price | calc_subtotal:item.quantity }}</p>
+        </div>
+        <hr class="col-10 offset-1 w-50 mb-1">
+    {% endfor %}          
+    </div>
+    
+    <div class="row toast-footer bg-white">
+        <div class="col-12 mt-2">
+            <h6><strong>Bag Total: €{{ total|floatformat:2 }}</strong></h6>
+        </div>
+    </div>
+    
+</div>
