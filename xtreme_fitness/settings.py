@@ -111,11 +111,15 @@ WSGI_APPLICATION = 'xtreme_fitness.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    'default': dj_database_url.parse('postgres://wnqbogvdaweyqy:0974de7bf9f84c3d8e6c7c817855a502d773b5e2587fc71fb61609e2e75aaa83@ec2-34-251-245-108.eu-west-1.compute.amazonaws.com:5432/d9ad6bgc8i7jg3')
 }
 
 # Password validation
