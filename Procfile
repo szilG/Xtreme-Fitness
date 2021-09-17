@@ -1,0 +1,1 @@
+web: gunicorn xtreme_fitness.wsgi:application
