@@ -17,6 +17,7 @@
       {% block corecss%}
       <link rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
       <link rel="stylesheet" href="{% static 'css/base.css' %}">
       {% endblock %}
 
@@ -25,9 +26,10 @@
       {% endblock %}
 
       {% block corejs%}
-      <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
       {% endblock %}
 
       {% block extra_js %}
@@ -65,7 +67,7 @@
                               <a class="navbar-brand" href="{% url 'home' %}"><h2><span>X</span>treme FC |</h2></a>
                         </div>
                         <div class="col-12 col-lg-8 d-flex ml-auto my-auto">
-                              <div class="col-12 col-lg-8 my-auto py-1 py-lg-0 ml-auto search">
+                              <div class="col-12 col-lg-7 my-auto py-1 py-lg-0 ml-auto search">
                                     <form method="GET" action="{% url 'products' %}">
                                         <div class="input-group w-100 ">
                                             <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="Search our site">
@@ -79,7 +81,7 @@
                                         </div>
                                     </form>
                               </div>
-                              <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 navbar-icons">
+                              <div class="col-12 col-lg-5 my-auto py-1 py-lg-0 navbar-icons">
                                     <ul class="list-inline list-unstyled text-center text-lg-right my-0">
                                           <li class="list-inline-item dropdown">
                                                 <a class="nav-link" href="#" id="user-options"
