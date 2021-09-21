@@ -233,16 +233,21 @@ body {
       }
 }
 
-.service-block .inner-box .icon-box {
+.service-block .inner-box .icon-box{
       position: relative;
       font-size: 70px;
       line-height: 1em;
       color: #fff;
-      transition: all 600ms ease;
-      -moz-transition: all 600ms ease;
-      -webkit-transition: all 600ms ease;
-      -ms-transition: all 600ms ease;
-      -o-transition: all 600ms ease;
+      transition: all 1000ms ease;
+      -moz-transition: all 1000ms ease;
+      -webkit-transition: all 1000ms ease;
+      -ms-transition: all 1000ms ease;
+      -o-transition: all 1000ms ease;
+}
+
+
+.service-block .inner-box .icon-box:hover {
+      transform: scale3d(1.2, 1.1, 0.3) translateX(10px) rotate(359deg) translateY(15px);
 }
 
 .service-block .inner-box h4 {
@@ -255,18 +260,13 @@ body {
       text-transform: uppercase;
 }
 
-.service-block .inner-box h4 a {
-      cursor: pointer;
-      position: relative;
-}
 .service-block .inner-box .text {
       position: relative;
       color: #ffffff;
       font-size: 16px;
       line-height: 1.8em;
       padding: 0px 50px;
-      font-family: 'Roboto', sans-serif;
-  }
+}
 
   @media only screen and (max-width: 1140px){
   .service-block .inner-box .text {
@@ -314,7 +314,164 @@ body {
       opacity: 0.3;
 }
 
+/*--------------About section--------*/
+.about-section {
+      position: relative;
+      padding-top: 125px;
+}
 
+.about-section .content-column {
+      position: relative;
+}
+
+.about-section .content-column .inner-column {
+      position: relative;
+}
+
+.about-section .content-column .section-title {
+      position: relative;
+      margin-bottom: 15px;
+}
+
+.section-title .title {
+      position: relative;
+      color: #555555;
+      font-size: 18px;
+      font-weight: 500;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+}
+
+.section-title h2 {
+      position: relative;
+      color: #222222;
+      font-weight: 700;
+      line-height: 1.2em;
+      margin-top: 15px;
+      text-transform: uppercase;
+}
+
+.about-section .content-column .red-text {
+      position: relative;
+      color: #ff0000;
+      font-size: 18px;
+      line-height: 1.7em;
+      font-weight: 700;
+      margin-bottom: 20px
+}
+
+.about-section .content-column .text {
+      position: relative;
+      color: #555555;
+      font-size: 16px;
+      line-height: 1.8em;
+      font-weight: 400;
+      margin-bottom: 35px;
+}
+
+.featured-block {
+      position: relative;
+      margin-bottom: 40px;
+}
+
+.featured-block .block-inner {
+      position: relative;
+      padding-top: 4px;
+      padding-left: 100px;
+
+}
+
+.featured-block .icon {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      color: #ff0000;
+      opacity: .6;
+      font-size: 60px;
+      line-height: 1em;
+      transition: all 1000ms ease;
+      -ms-transition: all 1000ms ease;
+      -o-transition: all 1000ms ease;
+      -moz-transition: all 1000ms ease;
+      -webkit-transition: all 1000ms ease;
+}
+
+.featured-block .icon:hover {
+      transform: translateY(10px);
+}
+
+.featured-block strong {
+      position: relative;
+      color: #222222;
+      font-size: 20px;
+      font-weight: 700;
+}
+
+.featured-block .feature-text {
+      position: relative;
+      color: #555555;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.7em;
+      margin-top: 3px;
+}
+
+.about-section .image-column {
+      position: relative;
+}
+
+.about-section .image-column .inner-column {
+      position: relative;
+}
+
+.about-section .image-column .inner-column .award {
+      position: absolute;
+      left: 0px;
+      bottom: 120px;
+}
+/*--------------Membership section----------*/
+.membership {
+      position: relative;
+      overflow: hidden;
+      padding: 90px 0px 90px;
+      background-color: #222222;
+}
+
+.membership .title {
+      position: relative;
+      color: #fff;
+      font-size: 18px;
+      font-weight: 500;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+}
+
+.membership h2 {
+      position: relative;
+      color: #fff;
+      font-weight: 700;
+      line-height: 1.2em;
+      margin-top: 15px;
+      text-transform: uppercase;
+}
+
+.membership .content-column .red-text {
+      position: relative;
+      color: #ff0000;
+      font-size: 18px;
+      line-height: 1.7em;
+      font-weight: 700;
+      margin-bottom: 20px
+}
+
+.membership .content-column .text {
+      position: relative;
+      color: #fff;
+      font-size: 16px;
+      line-height: 1.8em;
+      font-weight: 400;
+      margin-bottom: 35px;
+}
 
 /*===============Products======================*/
 .p-img img {
@@ -463,7 +620,11 @@ span.badge:hover {
       .decrement-qty {
             margin-right: 0;
             padding: 2px;
-      }  
+      }
+      .about-section .image-column .inner-column .award {
+            bottom: 0;
+            width: 100px;
+      }
 }
 
 @media only screen and (max-width: 599px) {
