@@ -46,7 +46,6 @@
             <span class="sr-only">Next</span>
       </a>
 </div>
-
 <!-- End Carousel -->
 <!--Start Service Block-->
 <section class="services-section">
@@ -71,7 +70,7 @@
                                     <span class="icon"><i class="fa fa-dumbbell"></i></span>
                               </div>
                               <h4><a href="{% url 'products' %}?category=back_attack,boulder_shoulders,hard_ass_hamstrings,precision_pecs,quadzilla,ultimate_core"></a>workout</h4>
-                              <div class="text">Whether you have specific training goals or target areas, or you're just looking to find ways to shake up your routine or inspire you to move, these expert-created workouts will get you going.</div>
+                              <div class="text ml-lg-1 mr-lg-1">Whether you have specific training goals or target areas, or you're just looking to find ways to shake up your routine or inspire you to move, these expert-created workouts will get you going.</div>
                               <span class="big-icon"><i class="fa fa-dumbbell"></i></span>
                         </div>
                   </div>
@@ -111,7 +110,8 @@
                               <!--Featured Block 1-->
                               <div class="featured-block">
                                     <div class="block-inner">
-                                          <a href="{% url 'products' %}?category=back_attack,boulder_shoulders,hard_ass_hamstrings,precision_pecs,quadzilla,ultimate_core"><span class="icon"><i class="fas fa-biking"></i></span></a>
+                                          <a href="{% url 'products' %}?category=back_attack,boulder_shoulders,hard_ass_hamstrings,precision_pecs,quadzilla,ultimate_core">
+                                                <span class="icon"><i class="fas fa-biking"></i></span></a>
                                           <strong>Cardio and Strength</strong>
                                           <div class="feature-text">
                                                 Our personal trainers will help you find a perfect workout
@@ -152,43 +152,273 @@
       <div class="auto-container pl-5 pr-5">
             <div class="row">
                   <!--Content-Column-->
-                  <div class="content-column col-lg-12 text-center">
+                  <div class="content-column col-lg-10 offset-1 text-center">
                         <div class="inner-column">
                               <!--Section Title-->
                               <div class="section-title mb-5">
                                     <div class="title">Become a Member</div>
-                                    <h2>Live or work in Cork? Memberships are available for those looking to add fitness to their regime.</h2>
+                                    <h2>Live or work in Cork? <br> Memberships are available for those looking to add fitness to their regime.</h2>
                               </div>
                         </div>
                   </div>
                   <!--Image-Column-->
                   <div class="image-column col-lg-6 col-md-6 col-sm-12">
                         <div class="inner-column">
-                              <div class="image mx-auto">
+                              <div class="membership-image mx-auto">
                                     <img src="{% static 'membership-card.jpg' %}" class="img-fluid" alt="membership-card">
                               </div>
                         </div>
                   </div>
                   <div class="content-column col-lg-6 col-md-6 col-sm-12">
-                        <div class="red-text mt-5 mt-md-1 mb-5 text-center">
+                        <div class="red-text mt-5 mt-md-1 mb-5 pl-3">
                               Member Benefits available:
                         </div>
                         <div class="text">
                               <ul>
-                                    <li>10% discount on food in Globe Bar and The Red Bean Roastery.</li>
-                                    <li>10% discount of Maldron or Clayton Hotels</li>
-                                    <li>Parking available @ €1.50 per hour for the first 2 hours, €2.20 after this.</li>
-                                    <li>Private Swimming Lessons Available</li>
-                                    <li>Personal training sessions</li>
+                                    <li class="pb-2">10% discount on food in Globe Bar and The Red Bean Roastery.</li>
+                                    <li class="pb-2">10% discount of Maldron or Clayton Hotels</li>
+                                    <li class="pb-2">Parking available @ €1.50 per hour for the first 2 hours, €2.20 after this.</li>
+                                    <li class="pb-2">Private Swimming Lessons Available</li>
+                                    <li class="pb-2">Personal training sessions</li>
                               </ul>
                         </div>
-                        <a href="" class="btn btn-lg">Become a member<i class="fas fa-user"></i></a>
+                        <div class="member-btn text-center">
+                              <a href="" class="btn rounded-0">Become a member<i class="fas fa-user pl-2"></i></a>
+                        </div>
+                       
                   </div>
             </div>
       </div>
 </section>
 <!--End Membership Section-->
+<!--Start Testimonial Section-->
+<section class="testimonials-carousel">
+      <div class="auto-container">
+            <!--Carousel Wrapper-->
+            <div id="carousel-thumb" class="carousel slide carousel-thumbnails" data-ride="carousel">
+                  <div class="row clearfix">
+                        <div class="carousel-column col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                              <!-- Section Title -->
+                              <div class="section-title pl-3">
+                                    <div class="title">Testimonial</div>
+                                    <h2>REviews From <br> You</h2>
+                              </div>
+                              <!-- Slides -->
+                              <div class="carousel-inner pl-3" role="listbox">
+                                   <div class="carousel-item">
+                                          <div class="testimonial-block">
+                                                <div class="inner-box">
+                                                      <div class="title">Nutritionist</div>
+                                                      <h4>Melissa McCarthy</h4>
+                                                      <div class="rating">
+                                                            <span class="fa fa-star"></span>
+                                                            <span class="fa fa-star"></span>
+                                                            <span class="fa fa-star"></span>
+                                                            <span class="fa fa-star"></span>
+                                                            <span class="fa fa-star"></span>
+                                                      </div>
+                                                      <div class="quote-icon flaticon-right-quote"></div>
+                                                      <div class="text">I can highly recommend Xtreme FC gym.
+                                                            I started training in Xtreme FC a few months
+                                                            back and he has completely changed my mindset when it comes to training.
+                                                            I no longer dread going into the gym I now actually dread missing a class
+                                                            in Xtreme FC.</div>
+                                                </div>
+                                          </div>
+                                    </div>                                    
+                                    <div class="carousel-item">
+                                          <div class="testimonial-block">
+                                                <div class="inner-box">
+                                                      <div class="title">HSE worker</div>
+                                                      <h4>Holly Coughlan</h4>
+                                                      <div class="rating">
+                                                            <span class="fa fa-star"></span>
+                                                            <span class="fa fa-star"></span>
+                                                            <span class="fa fa-star"></span>
+                                                            <span class="fa fa-star"></span>
+                                                            <span class="fa fa-star"></span>
+                                                      </div>
+                                                      <div class="quote-icon flaticon-right-quote"></div>
+                                                      <div class="text">You get a warm welcome at Xtreme FC. You are
+                                                            never judged. You are respected. Your custom is valued. You get fitter and healthier
+                                                            quickly. You get sound advice and counsel. You make new friends. No class is ever the same.
+                                                            You laugh a lot. You want to keep coming back.</div>
+                                                </div>
+                                          </div>
+                                    </div>                                   
+                                    <div class="carousel-item">
+                                          <div class="testimonial-block">
+                                                <div class="inner-box">
+                                                      <div class="title">UCC Student</div>
+                                                      <h4>Rachel Ryan</h4>
+                                                      <div class="rating">
+                                                            <span class="fa fa-star"></span>
+                                                            <span class="fa fa-star"></span>
+                                                            <span class="fa fa-star"></span>
+                                                            <span class="fa fa-star"></span>
+                                                            <span class="fa fa-star"></span>
+                                                      </div>
+                                                      <div class="quote-icon flaticon-right-quote"></div>
+                                                      <div class="text">The group PT sessions are an excellent way to be pushed in training more that you
+                                                            would working on your own while also being able to have a laugh with the group.
+                                                            I'm definitely feeling stronger, fitter and faster since starting them. Thank you! </div>
+                                                </div>
+                                          </div>
+                                    </div>
+                                    <div class="carousel-item active">
+                                          <div class="testimonial-block">
+                                                <div class="inner-box">
+                                                      <div class="title">Web Developer</div>
+                                                      <h4>John O'Driscoll</h4>
+                                                      <div class="rating">
+                                                            <span class="fa fa-star"></span>
+                                                            <span class="fa fa-star"></span>
+                                                            <span class="fa fa-star"></span>
+                                                            <span class="fa fa-star"></span>
+                                                            <span class="fa fa-star"></span>
+                                                      </div>
+                                                      <div class="quote-icon flaticon-right-quote"></div>
+                                                      <div class="text">Having a dedicated team of personal trainers means you have a point of contact
+                                                            should you have any questions about an exercise during a class or working out in the gym
+                                                            in an atmosphere that's hard working and also very friendly.</div>
+                                                </div>
+                                          </div>
+                                    </div>
+                              </div>
+                             <!-- Slides --> 
+                              <!-- Controls -->
+                              <a class="carousel-control-prev" href="#carousel-thumb" role="button" data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                              </a>
+                              <a class="carousel-control-next" href="#carousel-thumb" role="button" data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                              </a>                             
+                        </div>
+                        <div class="pagers-column col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                              <!-- Controls-->
+                              <ol class="carousel-indicators">
+                                    <li data-target="#carousel-thumb" data-slide-to="0" class=""> <div class="image"><img src="{% static 'author-1.jpeg' %}" class="img-fluid" alt="nutritionist girl"></div></li>
+                                    <li data-target="#carousel-thumb" data-slide-to="1" class=""><div class="image"><img src="{% static 'author-2.jpeg' %}" class="img-fluid" alt="fitness girl"></div></li>
+                                    <li data-target="#carousel-thumb" data-slide-to="2" class=""><div class="image"><img src="{% static 'author-3.jpeg' %}"  class="img-fluid" alt="girl doing fitness"></div></li>
+                                    <li data-target="#carousel-thumb" data-slide-to="3" class="active"><div class="image"><img src="{% static 'author-4.jpeg' %}" class="img-fluid" alt="fitness man"></div></li>
+                              </ol>
+                        </div>                       
+                  </div>
+            </div>
+      </div>
+</section>
+<!--End Testimonial Section-->
+<!--Start Contact Map Section-->
+<section class="contact-section">
+      <!--map box-->
+      <div class="map-box">
+            <div class="map-outer">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2461.947587459914!2d-8.474601348764978!3d51.89842058975903!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x484490104a24174d%3A0xb8772718995a199f!2sSt%20Patrick&#39;s%20St%2C%20Centre%2C%20Cork!5e0!3m2!1sen!2sie!4v1632403818716!5m2!1sen!2sie" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+      </div>
+      <div class="auto-container">
+            <div class="map-info-box">
+                  <div class="clearfix">
+                        <!--Column 1-->
+                        <div class="image-column col-lg-5 col-md-12 col-sm-12">
+                              <div class="image">
+                                    <img src="{% static 'info.jpeg' %}" alt="dumbbell picture">
+                              </div>
+                        </div>
+                        <!--Column 2-->
+                        <div class="info-column col-lg-7 col-md-12 col-sm-12">
+                              <div class="inner-column">
+                                    <ul>
+                                          <li>
+                                                <span class="icon"><i class="fas fa-map-marker-alt"></i></span>
+                                                <strong>Location</strong>
+                                                27 St Patrick's St, Cork, IRL
+                                          </li>
+                                          <li>
+                                                <span class="icon"><i class="fas fa-phone-alt"></i></span>
+                                                <strong>Contact</strong>
+                                                <a href="tel:+353123456789"> +(353)123 456 789</a>
+                                          </li>
+                                          <li>
+                                                <span class="icon"><i class="fas fa-at"></i></span>
+                                                <strong>Email</strong>
+                                                <a href="mailto:xtremefitnessclub@gmail.com">Xtremefitnessclub@gmail.com</a>
+                                          </li>
+                                    </ul>
+                              </div>
+                        </div>
+                  </div>
+            </div>
+      </div>
+</section>
+<!--End Contact Map Section-->
+<!--Start Contact-form Section-->
+<section class="contact-form-section">
+      <div class="auto-container">
+            <div class="row clearfix">
+                  <!--Title Column-->
+                  <div class="title-column col-lg-4 col-md-12 col-sm-12">
+                        <div class="inner-column">
+                              <!--Section Title-->
+                              <div class="section-title">
+                                    <div class="title">Contact Now</div>
+                                    <h2>Ask us anything</h2>
+                              </div>
+                              <div class="text">For future information on membership types, corporate rates, classes, or spa bookings
+                                    please contact us below</div>
+                        </div>
+                  </div>
+                  <!--Form Column-->
+                  <div class="form-column col-lg-8 col-md-12 col-sm-12">
+                        <div class="inner-column">
+                              <!--Form-->
+                              <div class="form">
+                                    <form id="myForm" onsubmit="return sendMail(this);">
+                                          {% csrf_token %}
+                                          <div class="row clearfix">
+                                                <div class="form-group col-lg-6 col-md-6 col-sm-12">
+                                                      <input type="text" name="username" placeholder="Name" required>
+                                                </div>
+                                                <div class="form-group col-lg-6 col-md-6 col-sm-12">
+                                                      <input type="email" name="email" placeholder="Email" required>
+                                                </div>
+                                                <div class="form-group col-lg-12 col-md-12 col-sm-12">
+                                                      <input type="text" name="subject" placeholder="Subject" required>
+                                                </div>
+                                                <div class="form-group col-lg-12 col-md-12 col-sm-12">
+                                                      <textarea name="massage" id="message" cols="30" rows="10" placeholder="Your Message"></textarea>
+                                                </div>
+                                                <div class="form-group clearfix col-lg-12 col-md-12 col-sm-12">
+                                                      <div class="send-message-btn">
+                                                            <button>
+                                                                  <p>Send Message</p>
+                                                            </button>
+                                                      </div>
+                                                </div>
+                                          </div>
+                                    </form>
+                              </div>
+                        </div>
+                  </div>
+            </div>
+      </div>
+</section>
+<!--End Contact-form Section-->
+
+{% endblock %} 
 
 
+{% block postloadjs %}
+      {{ block.super }}
+            <script type="text/javascript">
+                  $('button').click(function() {
+                        $(this).toggleClass('clicked');
+                        $('button p').text(function(i, text) {
+                              return text === "Sent!" ? "Send" : "Message Sent!";
+                        });
+                  });
+            </script>
+{% endblock %}
 
-{% endblock %}    

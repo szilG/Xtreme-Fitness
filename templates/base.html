@@ -26,10 +26,19 @@
       {% endblock %}
 
       {% block corejs%}
+      <!--Bootstarp-->
       <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+      <!--Anime js-->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+      <!--Email JS-->
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+      <script>
+            (function() {
+            emailjs.init("user_kubWAs5UzOaovudWdYgFm");
+            })();
+      </script>
       {% endblock %}
 
       {% block extra_js %}
@@ -47,7 +56,7 @@
                         </div>
                         <div class="col-lg-6 right-icons ml-auto">
                               <i class="fas fa-location-arrow pr-1 pr-xl-2 pl-1 pl-xl-2"></i>27 Patrick St, Cork, IRL |
-                              <i class="fas fa-phone-alt pr-1 pr-xl-2 pl-1 pl-xl-2"></i><a href="tel:+1044123456789"> +1(353)123 456 789 |</a>
+                              <i class="fas fa-phone-alt pr-1 pr-xl-2 pl-1 pl-xl-2"></i><a href="tel:+353123456789"> +(353)123 456 789 |</a>
                               <i class="far fa-clock pr-1 pr-xl-2 pl-xl-2"></i>Mon-Sun: 6AM - 11PM |
                         </div>
       
@@ -172,11 +181,15 @@
       {% endblock %}
 
       {% block postloadjs %}
+      <!--Bootstrap toast-->
       <script type="text/javascript">
             $('.toast').toast('show');
       </script>
+      <!--EmailJs-->
+      <script src="{% static 'js/sendEmail.js' %}"></script>
       
       {{ block.super }}
+      <!--Back to top btn-->
       <script type="text/javascript">
             $('.btt-link').click(function(e) {
                   window.scrollTo(0,0)
