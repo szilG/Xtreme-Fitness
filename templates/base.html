@@ -41,6 +41,7 @@
       </script>
       <!--SweetAlert-->
       <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+      
       {% endblock %}
 
       {% block extra_js %}
@@ -72,7 +73,7 @@
                         </div>
                   </div>
             </div>
-            <div class="container-fluid fixed-top-desktop-only header-bg-black-mobil">
+            <div class="container-fluid fixed-top-desktop-only header-bg-black-mobil bg-color">
                   <div class="row pt-lg-4 d-none d-lg-flex">
                         <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
                               <a class="navbar-brand" href="{% url 'home' %}"><h2><span>X</span>treme FC |</h2></a>
@@ -134,8 +135,8 @@
                               </div>
                         </div>
                   </div>
-                  <div class="row">
-                        <nav class="navbar navbar-expand-lg w-100">
+                  <div>
+                        <nav class="navbar navbar-expand-lg">
                               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                                     <span class="navbar-toggler-icon">
                                     <i class="fas fa-bars"></i>
@@ -176,6 +177,8 @@
             </a>	
       </div>
 
+      {% block page_header %}
+      {% endblock %}
 
 
       {% block content %}
@@ -193,6 +196,13 @@
       </script>
       <!--EmailJs-->
       <script src="{% static 'js/sendEmail.js' %}"></script>
+
+      <!--navbar color change on scrolling-->
+      <script>
+            $(window).scroll(function() {
+                  $('.bg-color').toggleClass('scrolled', $(this).scrollTop() > 50)
+            });
+      </script>
       
       {{ block.super }}
       <!--Back to top btn-->
