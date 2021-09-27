@@ -39,6 +39,8 @@
             emailjs.init("user_kubWAs5UzOaovudWdYgFm");
             })();
       </script>
+      <!--SweetAlert-->
+      <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
       {% endblock %}
 
       {% block extra_js %}
@@ -174,11 +176,15 @@
             </a>	
       </div>
 
-      {% block page_header %}
-      {% endblock %}
+
 
       {% block content %}
       {% endblock %}
+
+      <footer class="main-footer">
+            {% include 'includes/footer.html' %}
+      </footer>
+
 
       {% block postloadjs %}
       <!--Bootstrap toast-->

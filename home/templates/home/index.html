@@ -379,20 +379,20 @@
                                           {% csrf_token %}
                                           <div class="row clearfix">
                                                 <div class="form-group col-lg-6 col-md-6 col-sm-12">
-                                                      <input type="text" name="username" placeholder="Name" required>
+                                                      <input type="text" name="name" placeholder="Name" class="name" required>
                                                 </div>
                                                 <div class="form-group col-lg-6 col-md-6 col-sm-12">
-                                                      <input type="email" name="email" placeholder="Email" required>
+                                                      <input type="email" name="email" placeholder="Email" class="email" required>
                                                 </div>
                                                 <div class="form-group col-lg-12 col-md-12 col-sm-12">
-                                                      <input type="text" name="subject" placeholder="Subject" required>
+                                                      <input type="text" name="subject" placeholder="Subject" class="subject" required>
                                                 </div>
                                                 <div class="form-group col-lg-12 col-md-12 col-sm-12">
-                                                      <textarea name="massage" id="message" cols="30" rows="10" placeholder="Your Message"></textarea>
+                                                      <textarea name="message" id="message" cols="30" rows="10" placeholder="Your Message" class="message" ></textarea>
                                                 </div>
                                                 <div class="form-group clearfix col-lg-12 col-md-12 col-sm-12">
                                                       <div class="send-message-btn">
-                                                            <button>
+                                                            <button class="message-btn">
                                                                   <p>Send Message</p>
                                                             </button>
                                                       </div>
@@ -405,6 +405,8 @@
             </div>
       </div>
 </section>
+<!-- loader -->
+
 <!--End Contact-form Section-->
 
 {% endblock %} 
@@ -412,13 +414,6 @@
 
 {% block postloadjs %}
       {{ block.super }}
-            <script type="text/javascript">
-                  $('button').click(function() {
-                        $(this).toggleClass('clicked');
-                        $('button p').text(function(i, text) {
-                              return text === "Sent!" ? "Send" : "Message Sent!";
-                        });
-                  });
-            </script>
+            
 {% endblock %}
 

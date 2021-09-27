@@ -191,7 +191,7 @@ body {
       top: 0px;
       width: 35%;
       height: 100%;
-      background-color: #222222;
+      background-color: #181a1f;
 }
 
 .services-section:after {
@@ -439,7 +439,7 @@ body {
       position: relative;
       overflow: hidden;
       padding: 90px 0px 90px;
-      background-color: #222222;
+      background-color: #181a1f;
 }
 
 .membership .title {
@@ -777,26 +777,203 @@ body {
       cursor: pointer;
       background: none;
 }
-.send-message-btn button:hover {
-      border: 2px solid #ff0000;
+
+.send-message-btn button p {
+      margin-bottom: 0;
 }
 
-.send-message-btn button.clicked {
-      background-color: #ff0000;
+.send-message-btn button:hover {
       border: 2px solid #ff0000;
+      background: #ff0000;
       color: #fff;
-      padding-right: 6px;
-      animation: bounce-in .3s;
-      cursor: default;
 }
-    
-@keyframes bounce-in {
-      0% { padding-right: 30px; }
-      40% { padding-right: 6px; }
-      50% { padding-left: 30px; }
-      100% { padding-left: 6px; }
+
+.swal-button {
+      padding: 7px 19px;
+      border-radius: none !important;
+      background-color: #ff0000;
+      font-size: 12px;
+      text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
+      border: none !important;
 }
-    
+
+.swal-button:hover {
+      border: none;
+      background-color: yellow !important;
+}
+
+.swal-modal {
+      background-color: rgba(0,0,0,0.8);
+
+}
+
+.swal-icon--success__hide-corners {
+      background: none !important;
+}
+
+.swal-icon--success:before,
+.swal-icon--success:after {
+      background: none !important;
+}
+
+.swal-title {
+      color: #fff;
+}
+
+.swal-text {
+      color: #fff;
+}
+
+/*------------footer-----------*/
+.main-footer {
+      background: url('/static/footer-bg.jpeg');
+      position: relative;
+      background-position: left center;
+      background-repeat: no-repeat;
+      background-size: cover;
+}
+
+.main-footer:before {
+      position: absolute;
+      content: '';
+      left: 0px;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      background-color: rgba(34,34,34,0.50);
+}
+
+.main-footer .footer-widgets {
+      position: relative;
+      padding: 95px 0px 60px;
+}
+
+.main-footer .footer-column {
+      position: relative;
+}
+
+.main-footer .footer-widget {
+      margin-bottom: 30px;
+}
+
+.main-footer .logo-widget {
+      position: relative;
+}
+
+.main-footer .logo-widget .logo {
+      position: relative;
+      margin-bottom: 30px;
+}
+
+.main-footer .logo-widget .text {
+      position: relative;
+      color: #ffffff;
+      font-size: 15px;
+      line-height: 1.7em;
+      font-weight: 400;
+      margin-bottom: 25px;
+}
+
+.main-footer .logo-widget .logo-widget {
+      position: relative;
+}
+
+.main-footer .logo-widget .social-links span {
+      position: relative;
+      display: block;
+      color: #ffffff;
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 10px;
+}
+
+.main-footer .logo-widget .social-links a {
+      position: relative;
+      color: #ffffff;
+      opacity: 0.8;
+      font-size: 16px;
+      margin-right: 15px;
+      transition: all 300ms ease;
+      display: inline-block;
+}
+
+.main-footer .footer-widget h4 {
+      position: relative;
+      font-weight: 600;
+      color: #ffffff;
+      line-height: 1.2em;
+      margin-bottom: 35px;
+      padding-bottom: 20px;
+      text-transform: capitalize;
+}
+
+.main-footer .footer-widget h4:before {
+      position: absolute;
+      content: '';
+      left: 0px;
+      bottom: 0px;
+      height: 1px;
+      width: 30px;
+      background-color: #ffffff;
+}
+
+.main-footer .list-link {
+      position: relative;
+      padding: 0;
+}
+
+.main-footer .list-link li {
+      position: relative;
+      margin-bottom: 12px;
+      list-style: none;
+}
+
+.main-footer .list-link li a {
+      position: relative;
+      color: #ffffff;
+      font-size: 14px;
+      padding-left: 20px;
+      transition: all 300ms ease;
+}
+
+.main-footer .list-link li a:hover {
+      color: #ff0000;
+}
+
+.main-footer .list-link li a i {
+      padding-right: 10px;
+}
+
+.main-footer .timing-widget ul li {
+      position: relative;
+      color: #ffffff;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 1.6em;
+      margin-bottom: 28px;
+      list-style: none;
+}
+
+.main-footer .timing-widget ul li span {
+      position: relative;
+      display: block;
+      margin-top: 7px;
+      font-weight: 400;
+}
+
+.main-footer .footer-bottom {
+      position: relative;
+      padding: 20px 0px;
+      border-top: 1px solid rgba(255,255,255,0.15);
+}
+
+.main-footer .footer-bottom .copyright {
+      position: relative;
+      color: #ffffff;
+      font-size: 15px;
+      text-align: center;
+}
+
 
 /*===============Products======================*/
 .p-img img {
@@ -913,7 +1090,7 @@ span.badge:hover {
             color: #fff;
       }
       .services-section:after {
-            background-color: #222222;
+            background-color: #181a1f;
       }
 }
 
