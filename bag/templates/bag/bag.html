@@ -6,7 +6,7 @@
 <div class="container mb-2">
       <div class="row">
           <div class="col">
-              <h2 class="logo-font mb-4">Shopping Bag</h2>
+              <h2 class="mb-4">Shopping Bag</h2>
               <hr>
           </div>
       </div>
@@ -65,7 +65,7 @@
                                       </div>
                                     </form>
                                     <a class="update-link text-info mr-2 mr-md-5 ml-lg-3"><small>Update</small></a>
-                                    <a class="remove-item text-danger mr-2 ml-lg-5" id="remove_{{ item.item_id }}" data-product_size="{{ item.size }}"><small>Remove</small></a>
+                                    <a class="remove-item text-red mr-2 ml-lg-5" id="remove_{{ item.item_id }}" data-product_size="{{ item.size }}"><small>Remove</small></a>
                                 </td>
                                 <td class="py-3">
                                     <p class="my-0">€{{ item.product.price | calc_subtotal:item.quantity }}</p>
@@ -78,7 +78,7 @@
                                 <h6>Delivery: €{{ delivery|floatformat:2 }}</h6>
                                 <h4 class="mt-4"><strong>Total: €{{ grand_total|floatformat:2 }}</strong></h4>
                                 {% if free_delivery_delta > 0 %}
-                                    <p class="mb-1 text-danger">
+                                    <p class="mb-1 text-red">
                                         You could get free delivery by spending just <strong>€{{ free_delivery_delta }}</strong> more!
                                     </p>
                                 {% endif %}

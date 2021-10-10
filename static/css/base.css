@@ -13,6 +13,7 @@ body {
 main {
       min-height: calc(100vh - 150px);
 }
+
 /*========Base======*/
 #topbar {
       color: #fff;
@@ -138,6 +139,7 @@ main {
       cursor: pointer;
 
 }
+
 /*----navbar style after scroll----*/
 .bg-color.scrolled {
       background-color: #000;
@@ -1037,6 +1039,24 @@ span.badge:hover {
       margin-right: 10px; 
 }
 
+
+/*=================Bag=====================*/
+.table a {
+      text-decoration: none;
+}
+
+.text-red{
+      color: #ff0000;
+}
+
+.remove-item:hover {
+      color: #ff0000;
+      border-bottom: #ff0000 1px solid;
+}
+
+.update-link:hover {
+      
+}
 
 /*=================Bootstrap toasts================ */
 
