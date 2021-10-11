@@ -190,6 +190,11 @@ main {
       font-size: 12px;
 }
 
+.carousel-caption a:hover {
+      border: 1px solid #ff0000;
+      color: #fff;
+}
+
 .services-section {
       position: relative;
       background-color: #eee;
@@ -247,6 +252,11 @@ main {
       position: relative;
       text-align: center;
       padding: 80px 0px 80px;
+}
+
+.service-block .inner-box a{
+      text-decoration: none;
+      cursor: pointer;
 }
 
 @media only screen and (max-width: 1023px){
