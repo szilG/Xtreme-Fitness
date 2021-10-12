@@ -49,7 +49,7 @@ main {
 
 input[name='q']::placeholder {
       color: #aab7c4;
-  }
+}
 
 .navbar-icons a{
       color: #fff;
@@ -116,10 +116,6 @@ input[name='q']::placeholder {
 .navbar-toggler-icon i {
       color: #fff;
       font-size: 23px;
-}
-
-.bg-black {
-      background: #000;
 }
 
 .btt-button {
