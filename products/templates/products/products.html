@@ -5,7 +5,7 @@
 
 {% block content %}      
       <div>
-            <img src="../../../static/about-2.jpg" alt="fitness girl">
+            <img class="img-fluid" src="../../../static/about-2.jpg" alt="fitness girl">
       </div>
       <div class="container-fluid mt-5 pt-5">
             <div class="row">
@@ -58,7 +58,7 @@
                                                       </a>
                                                 {% else %}
                                                       <a href="{% url 'product_detail' product.id %}">
-                                                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                                                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}no-photo.png" alt="{{ product.name }}">
                                                       </a>
                                                 {% endif %}
                                                 <div class="card-body pb-0">

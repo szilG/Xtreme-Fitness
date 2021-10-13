@@ -4,7 +4,7 @@
 
 {% block content %}
 <div>
-    <img src="../../../static/about-2.jpg" alt="fitness girl">
+    <img class="img-fluid" src="../../../static/about-2.jpg" alt="fitness girl">
 </div>
 <div class="container mb-2">
       <div class="row mt-4">
@@ -32,7 +32,11 @@
                         {% for item in bag_items %}
                             <tr>
                                 <td class="p-3 w-25">
-                                    <img class="img-fluid rounded" src="{{ item.product.image.url }}">
+                                    {% if item.product.image %}
+                                        <img class="img-fluid rounded" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
+                                    {% else %}
+                                        <img class="img-fluid rounded" src="{{ MEDIA_URL }}no-photo.png" alt="{{ item.product.name }}">
+                                    {% endif %}
                                 </td>
                                 <td class="py-3">
                                     <p class="my-0"><strong>{{ item.product.name }}</strong></p>
