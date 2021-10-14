@@ -63,7 +63,7 @@
                                     <div class="text">The progression principle says that there is a perfect level of overload between increasing too slow and too rapidly.</div>
                                     <span class="big-icon"><i class="fas fa-stopwatch"></i></span>
                               </a>
-                        </div>    
+                        </div>
                   </div>
                   <!--Service Block 2-->
                   <div class="col-lg-4 col-md-6 col-sm-12 pb-3 service-block style-two">
@@ -73,7 +73,8 @@
                                           <span class="icon"><i class="fa fa-dumbbell"></i></span>
                                     </div>
                                     <h4>workout</h4>
-                                    <div class="text ml-lg-1 mr-lg-1">Whether you have specific training goals or target areas, or you're just looking to find ways to shake up your routine or inspire you to move, these expert-created workouts will get you going.</div>
+                                    <div class="text ml-lg-1 mr-lg-1">Whether you have specific training goals or target areas, or you're just looking
+                                          to find ways to shake up your routine or inspire you to move, these expert-created workouts will get you going.</div>
                                     <span class="big-icon"><i class="fa fa-dumbbell"></i></span>
                               </a>
                         </div>
@@ -86,7 +87,8 @@
                                           <span class="icon"><i class="fab fa-nutritionix"></i></span>
                                     </div>
                                     <h4>nutrition</h4>
-                                    <div class="text">Foods are made up of nutrients. Protein, fat and vitamins are types of nutrients. Your body needs the right mix of nutrients to be healthy and well.</div>
+                                    <div class="text">Foods are made up of nutrients. Protein, fat and vitamins are types of nutrients.
+                                     Your body needs the right mix of nutrients to be healthy and well.</div>
                                     <span class="big-icon"><i class="fab fa-nutritionix"></i></span>
                               </a>
                         </div>
@@ -111,12 +113,12 @@
                                     At Xtreme Fitness Center Cork City, our motto is your fitness your way.
                               </div>
                               <div class="text">
-                                    Whatever way you choose to keep fit, whatever advice or instruction you need
-                                    – You’ll find it here. All our gym memberships come with unlimited usage, fitness assessments and
-                                    personalized fitness programs by our experienced trainers to tailor your exact needs.
-                                    We offer a wide range of classes ranging from swimming lessons to fitness classes and personal training.
-                                    You will also have discounted access to our 5 treatment room Spa and onsite physio, café, bar and restaurant.
-                                    Your fitness, your way in peaceful, calm surroundings.
+                                    Whatever way you choose to keep fit, whatever advice or instruction you need –
+                                    You’ll find it here. All our gym memberships come with unlimited usage, fitness assessments
+                                    and personalized fitness programs by our experienced trainers to tailor your exact needs. We offer
+                                    a wide range of classes ranging from swimming lessons to fitness classes and personal training.
+                                    You will also have discounted access to our 5 treatment room Spa and onsite physio, café, bar and
+                                    restaurant. Your fitness, your way in peaceful, calm surroundings.
                               </div>
                               <!--Featured Block 1-->
                               <div class="featured-block">
@@ -416,8 +418,6 @@
             </div>
       </div>
 </section>
-<!-- loader -->
-
 <!--End Contact-form Section-->
 
 {% endblock %} 
@@ -425,6 +425,32 @@
 
 {% block postloadjs %}
       {{ block.super }}
-            
+            <script type="text/javascript">
+                  // $('button').click(function() {
+                  //       $(this).toggleClass('clicked');
+                  //       $('button p').text(function(i, text) {
+                  //             return text === "Sent!" ? "Send" : "Message Sent!";
+                  //       });
+                  // });
+                  
+                  // EmailJs  Credit  https://www.emailjs.com/
+                  function sendMail(contactForm) {
+                        emailjs.send("service_utc302r", "template_fqa1rfl", {
+                              name: contactForm.name.value,
+                              email: contactForm.email.value,
+                              message: contactForm.message.value,
+                        })
+                        .then(function(res) {
+                              alert('Your mail is sent!');
+                              console.log("success", res.status);
+                        },
+                        function(error) {
+                              alert('Oops... ' + JSON.stringify(error));
+                              console.log("Failed", error);
+                        });
+                        document.getElementById("myForm").reset();
+                        return false;
+                        }
+            </script>
 {% endblock %}
 
