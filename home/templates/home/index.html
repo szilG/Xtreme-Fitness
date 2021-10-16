@@ -424,33 +424,7 @@
 
 
 {% block postloadjs %}
-      {{ block.super }}
-            <script type="text/javascript">
-                  // $('button').click(function() {
-                  //       $(this).toggleClass('clicked');
-                  //       $('button p').text(function(i, text) {
-                  //             return text === "Sent!" ? "Send" : "Message Sent!";
-                  //       });
-                  // });
-                  
-                  // EmailJs  Credit  https://www.emailjs.com/
-                  function sendMail(contactForm) {
-                        emailjs.send("service_utc302r", "template_fqa1rfl", {
-                              name: contactForm.name.value,
-                              email: contactForm.email.value,
-                              message: contactForm.message.value,
-                        })
-                        .then(function(res) {
-                              alert('Your mail is sent!');
-                              console.log("success", res.status);
-                        },
-                        function(error) {
-                              alert('Oops... ' + JSON.stringify(error));
-                              console.log("Failed", error);
-                        });
-                        document.getElementById("myForm").reset();
-                        return false;
-                        }
-            </script>
+      <!--EmailJs-->
+      <script src="{% static 'js/sendEmail.js' %}"></script>
 {% endblock %}
 

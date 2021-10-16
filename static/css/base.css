@@ -996,6 +996,10 @@ input[name='q']::placeholder {
       text-align: center;
 }
 
+.social-links i:hover {
+      color: #ff0000;
+}
+
 
 /*===============Products======================*/
 .p-img img {
@@ -1372,13 +1376,24 @@ span.badge:hover {
       .remove-item {
             font-size: 9px;
       }
+      .nav-link {
+            padding: 0.15rem !important;
+      }
+      .nav-link i {
+            font-size: 12px;
+      }
+      .navbar-toggler {
+            padding: .6rem .6rem;
+            font-size: 1rem;
+      }
+      .navbar {
+            padding: 0;
+      }
+
 }
 @media only screen and (max-width: 399px) {
       .gym-para {
             font-size: 10px;
-      }
-      .checkout-btn {
-            margin-top: 10px;
       }
       .contact-section .map-info-box .info-column ul {
             padding: 0;
@@ -1402,5 +1417,11 @@ span.badge:hover {
 @media only screen and (max-width: 359px) {
       .carousel-caption {
             display: none;
+      }
+}
+
+@media screen and (max-width: 347px) {
+      .checkout-btn {
+            margin-top: 10px;
       }
 }

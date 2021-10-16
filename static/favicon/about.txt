@@ -1,0 +1,6 @@
+This favicon was generated using the following font:
+
+- Font Title: Arizonia
+- Font Author: Copyright (c) 2011 TypeSETit, LLC (typesetit@att.net), with Reserved Font Name "Arizonia"
+- Font Source: http://fonts.gstatic.com/s/arizonia/v11/neIIzCemt4A5qa7mv6WGHK06UY30.ttf
+- Font License: SIL Open Font License, 1.1 (http://scripts.sil.org/OFL))
