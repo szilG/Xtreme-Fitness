@@ -1222,8 +1222,174 @@ span.badge:hover {
       border-color: #ff0000;
       border-radius: 0;
 }
-  
 
+/*====================ABOUT PAGE=====================*/
+.text-caption {
+      margin-top: -100px;
+      padding-left: 50px;
+}
+
+.text-caption h2 {
+      color: #fff;
+}
+
+.text-caption p {
+      color: #fff;
+}
+
+.about-service-sec {
+      position: relative;
+      padding-top: 80px;
+      padding-bottom: 100px;
+}
+
+.about-service-sec .image-layer {
+      background: url('/static/about-service-sec.jpeg');
+      position: absolute;
+      left: 0px;
+      top: -100px;
+      width: 100%;
+      height: 1000px;
+      background-color: #242625;
+      background-position: right top;
+      background-repeat: no-repeat;
+      clip-path: polygon(0 15%, 100% 0, 100% 58%, 0 77%);
+}
+
+.about-service-sec .image-layer::before {
+      position: absolute;
+      content: '';
+      left: 0px;
+      top: -84px;
+      width: 100%;
+      height: 255px;
+      background: url('/static/curve-layer.png') left top no-repeat;
+}
+
+.about-service-block {
+      position: relative;
+}
+
+.about-service-block .inner-box {
+      text-align: center;
+}
+
+.about-service-block .inner-box .icon.box {
+      margin-bottom: 25px;
+}
+
+.about-service-block span i {
+      font-size: 70px;
+      line-height: 1em;
+      color: #ffffff;
+}
+
+.about-service-block .inner-box .title {
+      color: #ff0000;
+      font-size: 16px;
+      font-weight: 700;
+      padding-top: 20px;  
+}
+
+.about-service-block .inner-box h4 {
+      color: #fff;
+      text-transform: uppercase;
+      padding-top: 10px;
+}
+
+.about-service-block .inner-box .text {
+      color: #fff;
+      padding-top: 20px;
+}
+  
+.service-box {
+      float: left;
+      width: 100%;
+}
+
+.service-box figure {
+      float: left;
+      width: 100%;
+}
+
+.service-box .content {
+      float: left;
+      width: 100%;
+      background: #ff0000;
+      position: relative;
+      min-height: 170px;
+}
+
+.service-box .content .price {
+      float: left;
+      width: 100%;
+      font-size: 22px;
+      font-weight: normal;
+      line-height: 2;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      padding: 20px 0 0 0;
+}
+
+.service-box .content .site-link {
+      text-decoration: none;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 25px;
+      display: block;
+      margin: 0 auto;
+}
+
+.service-box .content a i {
+      display: inline-block;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 6px;
+      font-size: 26px;
+      transition: 400ms ease;
+      transition-property: color, left;
+      margin: 0 auto;
+      color: #fff;
+}
+
+.service-box .content h3 a{
+      color: #fff;
+      text-decoration: none;
+}
+
+.motivation-section {
+      margin-top: 100px;
+}
+
+.motivation-section h1 {
+      text-transform: uppercase;
+      font-size: 60px;
+}
+
+.motivation-section h1 span {
+      color: #ff0000;
+      font-weight: 800;
+}
+
+.motivation-section p {
+      color: #555;
+      padding-top: 20px;
+}
+
+.motivation-section .motivation-icon .motivation-img img{
+      height: 80px;
+      width: 80px;
+}
+
+.motivation-section .motivation-icon .icon-caption {
+      text-transform: uppercase;
+}
+
+.motivation-section .motivation-icon .icon-caption span {
+      color: #ff0000;
+}
 /*=================Media queries===================*/
 
 @media (min-width: 1200px) {
@@ -1231,7 +1397,18 @@ span.badge:hover {
             width: 75%;
       }
 } 
-    /* fixed top navbar only on medium and up */
+
+@media only screen and (max-width: 1023px) {
+      .about-service-sec .image-layer {
+            clip-path: none;
+            top: 50px  
+      }
+      .about-service-sec .image-layer::before {
+            background: none;
+      }
+}
+
+/* fixed top navbar only on medium and up */
 @media only screen and (min-width: 992px) {
       .fixed-top-desktop-only {
             position: fixed;
@@ -1412,6 +1589,9 @@ span.badge:hover {
       }
       .contact-section .map-info-box .info-column ul li a {
             font-size: 13px;
+      }
+      .text-caption {
+            padding-left: 30px;
       }
       
 }

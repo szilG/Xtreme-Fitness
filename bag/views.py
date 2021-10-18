@@ -24,7 +24,6 @@ def add_to_bag(request, item_id):
     bag = request.session.get('bag', {})
 
     if size:
-        """if item in the bag"""
         if item_id in list(bag.keys()):
             """check another item of the same id
              and same size already exists"""

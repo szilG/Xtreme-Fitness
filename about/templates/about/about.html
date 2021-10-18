@@ -1,0 +1,270 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+      <!--Start Header Image Section-->
+      <div class="about-image">
+            <div><img class="img-fluid" src="{% static 'about-4.jpg' %}" alt="fitness girl"></div>
+            <div class="text-caption">
+                  <h2 class="animate__animated animate__fadeInRight animate__delay-0.5s">About Us</h2>
+                  <p class="animate__animated animate__fadeInRight animate__delay-1s">Fitness is not a destination it is a way of life.</p>
+            </div>
+      </div>
+      <!--End Header Image Section-->
+
+      <!--Start About Section-->
+      <section id="about" class="about-section">
+            <div class="auto-container pl-5 pr-5">
+                  <div class="row">
+                        <!--Content-Column-->
+                        <div class="content-column col-lg-6 col-md-12 col-sm-12">
+                              <div class="inner-column">
+                                    <!--Section Title-->
+                                    <div class="section-title">
+                                          <div class="title">Xtreme FC all about</div>
+                                          <h2>What is functional</h2>
+                                    </div>
+                                    <div class="red-text">
+                                          At Xtreme Fitness Center Cork City, our motto is your fitness your way.
+                                    </div>
+                                    <div class="text">
+                                          Whatever way you choose to keep fit, whatever advice or instruction you need –
+                                          You’ll find it here. All our gym memberships come with unlimited usage, fitness assessments
+                                          and personalized fitness programs by our experienced trainers to tailor your exact needs. We offer
+                                          a wide range of classes ranging from swimming lessons to fitness classes and personal training.
+                                          You will also have discounted access to our 5 treatment room Spa and onsite physio, café, bar and
+                                          restaurant. Your fitness, your way in peaceful, calm surroundings.
+                                    </div>
+                                    <!--Featured Block 1-->
+                                    <div class="featured-block">
+                                          <div class="block-inner">
+                                                <a href="{% url 'products' %}?category=back_attack,boulder_shoulders,hard_ass_hamstrings,precision_pecs,quadzilla,ultimate_core">
+                                                      <span class="icon"><i class="fas fa-biking"></i></span></a>
+                                                <strong>Cardio and Strength</strong>
+                                                <div class="feature-text">
+                                                      Our personal trainers will help you find a perfect workout
+                                                </div>
+                                          </div>
+                                    </div>
+                                    <!--Featured Block 2-->
+                                    <div class="featured-block">
+                                          <div class="block-inner">
+                                                <a href="{% url 'products' %}?category=back_attack,boulder_shoulders,hard_ass_hamstrings,precision_pecs,quadzilla,ultimate_core"><span class="icon"><i class="fas fa-dumbbell"></i></span></a>
+                                                <strong>Fitness Training</strong>
+                                                <div class="feature-text">
+                                                      Train with the best experts in bodybuilding field.
+                                                </div>
+                                          </div>
+                                    </div>
+
+                              </div>
+                        </div>
+                        <!--Image-Column-->
+                        <div class="image-column col-lg-6 col-md-12 col-sm-12">
+                              <div class="inner-column wow fadeInRight animated" data-wow-delay="0ms" data-wow-duration="1500ms" data-wow-offset="10"
+                              style="visibility: visible; animation-duration: 1500ms; animation-delay: 0ms; animation-name: fadeInRight;">
+                                    <div class="award animate__animated animate__pulse animate__infinite animate__slower">
+                                          <img src="{% static 'award.png' %}" class="img-fluid" alt="award-badge">
+                                    </div>
+                                    <div class="image">
+                                          <img src="{% static 'about-1.png' %}" class="img-fluid" alt="fitness couple">
+                                    </div>
+                              </div>
+                        </div>
+                  </div>
+            </div>
+      </section>
+      <!--End About Section-->
+
+      <!--Start Services Section-->
+      <section class="about-service-sec">
+            <div class="image-layer"></div>
+            <div class="auto-container">
+                  <div class="row clearfix">
+                        <div class="about-service-block col-lg-4 col-md-6 col-sm-12 mt-5">
+                              <div class="inner-box">
+                                    <div class="icon-box">
+                                          <span class="icon">
+                                                <i class="far fa-clock"></i>
+                                          </span>
+                                    </div>
+                                    <div class="title">Friendly Atmosphere</div>
+                                    <h4>Long Working Hours</h4>
+                                    <div class="text">All our clients are treated
+                                          as unique individuals and will be given tailored training and nutrition plans
+                                          created specifically in line with their goals.</div>
+                              </div>
+                        </div>
+                        <div class="about-service-block col-lg-4 col-md-6 col-sm-12 mt-5">
+                              <div class="inner-box">
+                                    <div class="icon-box">
+                                          <span class="icon">
+                                                <i class="fas fa-users"></i>
+                                          </span>
+                                    </div>
+                                    <div class="title">Age doesn't matter </div>
+                                    <h4>All Age</h4>
+                                    <div class="text">With us, everyone is welcome. And we like freedom of
+                                          choice.We welcome all age group people under one roof.</div>
+                              </div>
+                        </div>
+                        <div class="about-service-block col-lg-4 col-md-6 col-sm-12 mt-5">
+                              <div class="inner-box">
+                                    <div class="icon-box">
+                                          <span class="icon">
+                                                <i class="fas fa-money-bill-wave"></i>
+                                          </span>
+                                    </div>
+                                    <div class="title">Excellent Deal</div>
+                                    <h4>Best Price</h4>
+                                    <div class="text">We think that everyone should have the opportunity
+                                          to live a healthy life. Not just those with beefy wallets.</div>
+                              </div>
+                        </div>
+                  </div>
+            </div>
+      </section>
+      <!--End Services Section-->
+
+      <!--Start Trainning Section-->
+      <section class="trainning-section text-center mb-5">
+            <div class="auto-container">
+                  <div class="row clearfix">
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+                              <div class="service-box">
+                                    <figure">
+                                          <img class="img-fluid" src="{% static 'about-gym-fitness.jpeg' %}" alt="fitness man">
+                                    </figure>
+                                    <div class="content">
+                                          <div class="price">€9.99/class</div>
+                                          <h3><a href="{% url 'products' %}?category=back_attack,boulder_shoulders,hard_ass_hamstrings,precision_pecs,quadzilla,ultimate_core">
+                                                UpperBody Trainnings</a></h3>
+                                          <a class="site-link" href="{% url 'products' %}?category=back_attack,boulder_shoulders,hard_ass_hamstrings,precision_pecs,quadzilla,ultimate_core">
+                                                <i class="fas fa-long-arrow-alt-right"></i>
+                                          </a>
+                                    </div>
+                              </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 pt-5 pt-md-0 pt-lg-0">
+                              <div class="service-box">
+                                    <figure">
+                                          <img class="img-fluid" src="{% static 'about-lowerbody-2.jpg' %}" alt="man tranning">
+                                    </figure>
+                                    <div class="content">
+                                          <div class="price">€9.99/class</div>
+                                          <h3><a href="{% url 'products' %}?category=back_attack,boulder_shoulders,hard_ass_hamstrings,precision_pecs,quadzilla,ultimate_core">
+                                                LowerBody Trainnings</a></h3>
+                                          <a class="site-link" href="{% url 'products' %}?category=back_attack,boulder_shoulders,hard_ass_hamstrings,precision_pecs,quadzilla,ultimate_core">
+                                                <i class="fas fa-long-arrow-alt-right"></i>
+                                          </a>
+                                    </div>
+                              </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 pt-5 pt-lg-0">
+                              <div class="service-box">
+                                    <figure">
+                                          <img class="img-fluid" src="{% static 'about-core.jpg' %}" alt="man doing core tranning">
+                                    </figure>
+                                    <div class="content">
+                                          <div class="price">€9.99/class</div>
+                                          <h3><a href="{% url 'products' %}?category=back_attack,boulder_shoulders,hard_ass_hamstrings,precision_pecs,quadzilla,ultimate_core">
+                                                Core Trainnings</a></h3>
+                                          <a class="site-link" href="{% url 'products' %}?category=back_attack,boulder_shoulders,hard_ass_hamstrings,precision_pecs,quadzilla,ultimate_core">
+                                                <i class="fas fa-long-arrow-alt-right"></i>
+                                          </a>
+                                    </div>
+                              </div>
+                        </div>
+                  </div>
+            </div>
+      </section>
+      <!--End Trainning Section-->
+
+      <!--Start-->
+      <section class="motivation-section text-center mb-5">
+            <div class="auto-container">
+                  <div class="row clearfix">
+                        <div class="col-12">
+                              <h1>What <span>are you waiting</span> for <span>?</span></h1>
+                        </div>
+                        <div class="col-10 offset-1">
+                              <p>Xtreme FC can help you to achieve all your fitness goals.
+                                    Be that weight loss, lean muscle gain or a complete mind & body transformation…
+                                    We got your back!</p>
+                        </div>
+                  </div>
+                  <div class="row clearfix mt-5">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-2">
+                              <div class="motivation-icon">
+                                    <div class="motivation-img">
+                                          <img src="{% static 'muscles.png' %}" alt="muscle image">
+                                    </div>
+                                    <div class="icon-caption pt-3">
+                                          Grow <span>Stronger</span>
+                                    </div>
+                              </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-2">
+                              <div class="motivation-icon">
+                                    <div class="motivation-img">
+                                          <img src="{% static 'stopwatch.png' %}" alt="stopwatch image">
+                                    </div>
+                                    <div class="icon-caption pt-3">
+                                          Enhance <span>Performance</span>
+                                    </div>
+                              </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-2">
+                              <div class="motivation-icon">
+                                    <div class="motivation-img">
+                                          <img src="{% static 'pizza.png' %}" alt="pizza image">
+                                    </div>
+                                    <div class="icon-caption pt-3">
+                                          Eat <span>Healthy</span>
+                                    </div>
+                              </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-2">
+                              <div class="motivation-icon">
+                                    <div class="motivation-img">
+                                          <img src="{% static 'throphy.png' %}" alt="throphy image">
+                                    </div>
+                                    <div class="icon-caption pt-3">
+                                          Compete and <span>Win</span>
+                                    </div>
+                              </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-2">
+                              <div class="motivation-icon">
+                                    <div class="motivation-img">
+                                          <img src="{% static 'hearth.png' %}" alt="hearth image">
+                                    </div>
+                                    <div class="icon-caption pt-3">
+                                          Improve your <span>Health</span>
+                                    </div>
+                              </div>
+                        </div>
+                  </div>
+            </div>
+      </section>
+
+      <!--Start-->
+      <section>
+            <div class="auto-container">
+                  <div class="row clearfix">
+                        <div class="col-12 text-center">
+                              <h2>EXERCISE & HEALTH</h2>
+                        </div>
+                        <div class="col-12 text-center">
+                              Feeling good and feeling strong is not just about how hard you train or how many hours you spend
+                              at the gym. Diet and food are at least as important for the body's well-being. If you both exercise
+                              and eat right, you will quickly feel how your whole body feels good - inside and out.
+                        </div>
+                  </div>
+            </div>
+      </section>
+
+
+
+      
+{% endblock %} 
