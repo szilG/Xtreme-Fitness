@@ -1390,6 +1390,200 @@ span.badge:hover {
 .motivation-section .motivation-icon .icon-caption span {
       color: #ff0000;
 }
+
+.trainer-section {
+      overflow: hidden;
+      padding: 90px 0 90px;
+      background: url('/static/trainer-bg.jpg') top center;
+      background-attachment: fixed;
+      background-size: cover;
+}
+
+.trainer-section h2 {
+      font-weight: 700;
+      font-size: 50px;
+      text-transform: uppercase;
+      letter-spacing: .3rem;
+      margin-top: 15px;
+      color: #ff0000;
+      padding-bottom: 50px;
+}
+
+.team-block .inner-box .content {
+      position: absolute;
+      left: 0px;
+      bottom: 22px;
+      padding: 15px 30px;
+      display: inline-block;
+      background-color: #ffffff;
+      box-shadow: 0px 0px 15px rgb(0 0 0 / 12%)
+}
+
+.team-block .inner-box .content::before {
+      position: absolute;
+      content: '';
+      left: -2px;
+      top: 8px;
+      bottom: 8px;
+      width: 2px;
+}
+
+.team-block .inner-box .content .title {
+      position: relative;
+      color: #555555;
+      font-size: 14px;
+      font-weight: 400;
+      margin-bottom: 5px;
+}
+
+.team-block .inner-box .content .name {
+      position: relative;
+      color: #222222;
+      font-size: 20px;
+      font-weight: 700;
+      text-transform: uppercase;
+}
+
+.team-block .inner-box .content .team-social {
+      width: 100%;
+      display: block;
+      clear: both;
+      margin-top: 10px;
+}
+
+.team-block .inner-box .content .team-social a {
+      display: inline-block;
+      color: #ff0000;
+      position: relative;
+      padding-left: 10px;
+      z-index: 1;
+}
+
+.team-block .inner-box .content .team-social a:hover {
+      transform: scale(1.2)
+}
+
+.benefit-section {
+      position: relative;
+      margin-top: 125px;
+      margin-bottom: 100px;
+}
+
+.benefit-section .side-image {
+      background: url('/static/benefit-5.png');
+      position: absolute;
+      left: 0px;
+      bottom: -70px;
+      width: 300px;
+      height: 181px;
+      background-repeat: no-repeat;
+      --animate-duration: 7s;
+}
+
+.benefit-section .content-column {
+      position: relative;
+      margin-bottom: 40px;
+}
+
+.benefit-section .content-column .section-title {
+      color: #555;
+      font-size: 18px;
+      font-weight: 500;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+}
+
+.benefit-section .content-column h2 {
+      color: #222;
+      font-weight: 700;
+      line-height: 1.2em;
+      margin-top: 15px;
+      text-transform: uppercase;
+}
+
+.benefit-section .content-column .benefit-block {
+      position: relative;
+      margin-bottom: 40px;
+      padding-top: 30px;
+}
+
+.benefit-section .content-column .benefit-block .block-inner {
+      position: relative;
+      padding-top: 0px;
+      padding-left: 100px;
+}
+
+.benefit-section .content-column .benefit-block .block-inner img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 80px;
+      width: 80px;
+}
+
+.benefit-section .content-column .benefit-block .block-inner strong {
+      position: relative;
+      color: #222;
+      font-size: 24px;
+      font-weight: 600;
+}
+
+.benefit-section .content-column .benefit-block .block-inner .benefit-text {
+      position: relative;
+      color: #555;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.7em;
+      margin-top: 3px;
+}
+
+.benefit-section .images-column {
+      position: relative;
+      margin-bottom: 40px;
+}
+
+.benefit-section .images-column .inner-column {
+      position: relative;
+      padding-top: 110px;
+      padding-left: 70px;
+      padding-bottom: 55px;
+}
+
+.benefit-section .images-column .image-two {
+      position: absolute;
+      left: 0px;
+      top: 250px;
+}
+
+.benefit-section .images-column .image-three {
+      position: absolute;
+      right: 80px;
+      top: 50px;
+      box-shadow: 0px 0px 20px rgb(0 0 0 / 15%);
+}
+
+.benefit-section .images-column .image-four {
+      position: absolute;
+      right: 0px;
+      bottom: 0px;
+      box-shadow: 0px 0px 20px rgb(0 0 0 / 15%);
+}
+
+.elementor-section h2 {
+      color: #222;
+      font-weight: 700;
+      line-height: 1.2em;
+      margin-top: 15px;
+      text-transform: uppercase;
+}
+
+.elementor-section p {
+      color: #555;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.7em;
+      margin-top: 3px;
+}
 /*=================Media queries===================*/
 
 @media (min-width: 1200px) {
@@ -1405,6 +1599,12 @@ span.badge:hover {
       }
       .about-service-sec .image-layer::before {
             background: none;
+      }
+      .benefit-section .images-column .inner-column {
+            padding-left: 160px;
+      }
+      .benefit-section .side-image {
+            display: none;
       }
 }
 
