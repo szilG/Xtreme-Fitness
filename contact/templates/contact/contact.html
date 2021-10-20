@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+      <!--Start Header Image Section-->
+      <div class="about-image">
+            <div><img class="img-fluid" src="{% static 'contact-02.jpg' %}" alt="fitness girl"></div>
+            <div class="text-caption">
+                  <h2 class="animate__animated animate__fadeInRight animate__delay-0.5s">Contact Us</h2>
+                  <p class="animate__animated animate__fadeInRight animate__delay-1s">Get in the best shape of your life</p>
+            </div>
+      </div>
+      <!--End Header Image Section-->
+
+      <!--Start Contact-form Section-->
+      <section class="contact-form-section">
+            <div class="auto-container">
+                  <div class="row clearfix">
+                        <!--Title Column-->
+                        <div class="title-column col-lg-4 col-md-12 col-sm-12">
+                              <div class="inner-column">
+                                    <!--Section Title-->
+                                    <div class="section-title">
+                                          <div class="title">Contact Now</div>
+                                          <h2>Ask us anything</h2>
+                                    </div>
+                                    <div class="text">For future information on membership types, corporate rates, classes, or spa bookings
+                                          please contact us below</div>
+                              </div>
+                        </div>
+                        <!--Form Column-->
+                        <div class="form-column col-lg-8 col-md-12 col-sm-12">
+                              <div class="inner-column">
+                                    <!--Form-->
+                                    <div class="form">
+                                          <form id="myForm" onsubmit="return sendMail(this);">
+                                                {% csrf_token %}
+                                                <div class="row clearfix">
+                                                      <div class="form-group col-lg-6 col-md-6 col-sm-12">
+                                                            <input type="text" name="name" placeholder="Name" class="name" required>
+                                                      </div>
+                                                      <div class="form-group col-lg-6 col-md-6 col-sm-12">
+                                                            <input type="email" name="email" placeholder="Email" class="email" required>
+                                                      </div>
+                                                      <div class="form-group col-lg-12 col-md-12 col-sm-12">
+                                                            <input type="text" name="subject" placeholder="Subject" class="subject" required>
+                                                      </div>
+                                                      <div class="form-group col-lg-12 col-md-12 col-sm-12">
+                                                            <textarea name="message" id="message" cols="30" rows="10" placeholder="Your Message" class="message" ></textarea>
+                                                      </div>
+                                                      <div class="form-group clearfix col-lg-12 col-md-12 col-sm-12">
+                                                            <div class="send-message-btn">
+                                                                  <button class="message-btn">
+                                                                        <p>Send Message</p>
+                                                                  </button>
+                                                            </div>
+                                                      </div>
+                                                </div>
+                                          </form>
+                                    </div>
+                              </div>
+                        </div>
+                  </div>
+            </div>
+      </section>
+      <!--End Contact-form Section-->
+{% endblock %}
+
+{% block postloadjs %}
+      <!--EmailJs-->
+      <script src="{% static 'js/sendEmail.js' %}"></script>
+{% endblock %}
