@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<!--Start Header Image Section-->
+<div class="about-image">
+      <div><img class="img-fluid" src="{% static 'subscribe01.jpg' %}" alt="fitness girl"></div>
+      <div class="text-caption">
+            <h2 class="animate__animated animate__fadeInRight animate__delay-0.5s">Get subscribed</h2>
+            <p class="animate__animated animate__fadeInRight animate__delay-1s">Don’t miss any updates</p>
+      </div>
+</div>
+<!--End Header Image Section-->
+<section class="subscribe-section">
+    <div class="auto-container">
+        <div class="row">
+            <div class="col-lg-10 col-md-12 offset-lg-1">
+                <div>
+                    <h2 class="mb-2 text-center">Stay up to date with <span>X</span>treme Fitness Club</h2>
+                    <div class="border-top border-danger w-25 mx-auto mt-md-5 mb-md-5"></div>
+                    <p class="text-center">LET'S MAKE HEALTHY HAPPEN</p>
+                    <p class="text-center">Subscribe to our newsletter and never miss our latest news and offer.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-evenly mt-5">
+            <div class="col-lg-8 col-md-10 col-sm-12 offset-lg-2 offset-md-1">
+                <form action="{% url 'add_subscribe' %}" method="post">
+                    <div class="text-center">
+                        {% csrf_token %}
+                        {{ form|crispy }}
+                        <button type="submit" class="btn subscribe-btn">Submit</button>
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
