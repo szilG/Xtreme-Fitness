@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+      <!--Start Header Image Section-->
+      <div class="blog-details-image">
+            <div><img class="img-fluid" src="{{ post.image_url }}" alt="{{ post.title }}"></div>
+            
+      </div>
+      <!--End Header Image Section-->
+      <section class="blog-details-section">
+            <div class="auto-container">
+                  <div class="row clearfix">
+                        <div class="col-lg-10 offset-1">
+                              <div class="" >
+                                    <h2 class="text-center">{{ post.title}}</h2>
+                                    <div class="border-top border-danger w-25 mx-auto mt-md-5 mb-md-5"></div>
+                                    <h5 class="text-center">{{ post.intro }}</h5>
+                                    <div class="">
+                                          <div class="text-muted text-center">
+                                                <small>{{ post.date_added }}</small>
+                                          </div>
+                                          
+                                    </div>
+                                    <p class="pt-5">{{ post.body }}</p>
+                                    <h6>{{ post.body_sub_header }}</h6>
+                                    <p>{{ post.body_text }}</p>
+                              </div>
+                        </div>
+                  </div>
+            </div>
+      </section>
+
+      <section class="comment-section">
+            <div class="auto-container">
+                  <div class="row">
+                        <div class="col-md-12">
+                              <h2>Comments</h2>
+                              {% for comment in post.comments.all %}
+                                    <article>
+                                          <div class="">
+                                                <p><strong>{{ comment.name }}</strong><small class="ml-2">{{ comment.date_added }}</small> </p>
+                                                <br>
+                                                {{ comment.body }}
+                                          </div>
+                                    </article>
+                                    <hr>
+                                    {% empty %}
+                                    <div class="notification">
+                                          <p>No Comments yet!</p>
+                                    </div>
+                              {% endfor %}
+                        </div>
+                  </div>
+            </div>
+            
+      </section>
+      <hr>
+      <section class="add-comment-section mb-5 mt-3">
+            <div class="auto-container">
+                  <div class="row">
+                        <div class="col-md-12">
+                              <h2>Add Comment</h2>
+                              <form action="." method="POST" enctype="multipart/form-data">
+                                    {% csrf_token %}
+                                    {{ form.as_p}}
+                                    <button class="btn btn-success">Submit</button>
+                              </form>
+                        </div>
+                  </div>
+            </div>
+      </section>
+
+{% endblock %}

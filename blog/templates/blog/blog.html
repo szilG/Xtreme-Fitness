@@ -11,21 +11,21 @@
             </div>
       </div>
       <!--End Header Image Section-->
-      <section class="blog-section">
+      <section class="blog-section mb-5">
             <div class="auto-container">
                   <div class="row clearfix">
                         {% for post in posts %}
                         <div class="col-lg-3">
-                              <div class="card" style="width: 18rem;">
+                              <div class="card border-0" >
                                     <img src="{{ post.image_url }}" alt="{{ post.title }}" class="card-img-top">
                                     <div class="card-body">
+                                          <div class="text-muted">
+                                                <small>{{ post.date_added }}</small>
+                                          </div>
                                           <h5 class="card-title">{{ post.title}}</h5>
                                           <p class="card-text">{{ post.intro }}</p>
-
-                                          <a href="#" class="btn btn-primary">Go somewhere</a>
-                                          <div class="card-footer text-muted">
-                                                {{ post_date_added }}
-                                              </div>
+                                          <a href="{% url 'blog_details' post.slug %}">Read More<i class="fas fa-long-arrow-alt-right ml-2"></i></a>
+                                          
                                     </div>
                               </div>
                         </div>

@@ -7,4 +7,5 @@ admin.autodiscover()
 
 urlpatterns = [
     path('', views.blog, name='blog'),
+    path('<slug:slug>/', views.blog_details, name='blog_details'),
 ]

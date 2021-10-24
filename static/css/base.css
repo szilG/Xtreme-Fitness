@@ -1628,7 +1628,50 @@ span.badge:hover {
 }
 
 /*================Blog page===================*/
+.blog-section {
+      margin-top: 200px;
+}
 
+.blog-section .card-body {
+      margin: 20px 0;
+      padding: 0;
+}
+
+.blog-section .card-body a {
+      text-decoration: none;
+      color: #ff0000;
+}
+
+.blog-section .card-body a:hover {
+      border-bottom: #ff0000 1px solid;
+}
+
+.blog-details-image img{
+      max-height: 600px;
+      width: 100vw;
+}
+
+.blog-details-section {
+    width: 80%;
+    height: auto;
+    background-color: #fff;
+    box-shadow: 2px 2px 12px rgba(0,0,0,.2);
+    margin: -10% auto 20px auto;
+    position: relative;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-bottom: 30px;
+}
+
+.blog-details-section h2 {
+      text-transform: uppercase;
+      padding-top: 30px;
+      
+}
+
+.comment-section {
+      margin-top: 50px;
+}
 
 
 
