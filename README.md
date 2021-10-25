@@ -27,9 +27,9 @@ Xtreme Fitness is Python-Django web application, support by a PostgreSQL (and SQ
 
 - [User Experience](#ux)
 
-      - [Wireframe](#wireframe)
-      - [Color Palette](#color-palette)
-      - [App Logo](#app-logo)
+  - [Wireframe](#wireframe)
+  - [Color Palette](#color-palette)
+  - [App Logo](#app-logo)
 
 - [User Stories](#user-stories)
 
