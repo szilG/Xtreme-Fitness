@@ -1665,14 +1665,23 @@ span.badge:hover {
 
 .blog-details-section h2 {
       text-transform: uppercase;
-      padding-top: 30px;
-      
+      padding-top: 30px;     
 }
 
 .comment-section {
       margin-top: 50px;
 }
 
+.back-btn a {
+      text-decoration: none;
+      color: #ff0000;
+      text-transform: uppercase;
+      padding: 10px;
+}
+
+.back-btn a i {
+      padding-right: 10px;
+}
 
 
 /*=================Media queries===================*/
