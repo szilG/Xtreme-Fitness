@@ -125,6 +125,45 @@ The structure of the apps are inspired by one of Code Institute's mini projects:
 | **Name** | **Database Key** | **Field Type** | **Validation** |
 --- | --- | --- | ---
 Name | name | CharField | max_length=254
-Friendly Name | friendly_name | Charfield | max_length=254, null=True, blank=True
+Friendly Name | friendly_name | CharField | max_length=254, null=True, blank=True
 
 <img src="static/products-app-data-schema.png"/>
+
+
+
+### Blog App
+
+#### Post Model
+
+| **Name** | **Database Key** | **Field Type** | **Validation** |
+--- | --- | --- | ---
+Title | title | CharField | max_length=254
+Slug | slug | SlugField | null=True, blank=True
+Intro | intro | TextField |
+Image_url |image_url | URLField | max_length=1024, null=True, blank=True
+Image |image | ImageField | null=True, blank=True
+Body |body| TextField | 
+Body_sub_header |body_sub_header | TextField| null=True, blank=True
+Body_text | body_text | TextField | null=True, blank=True
+Date_added | date_added | DateTimeField | auto_now_add=True
+
+
+#### Comment Model
+
+| **Name** | **Database Key** | **Field Type** | **Validation** |
+--- | --- | --- | ---
+Post | post | ForeignKey Post, related_name='comments' | null=True, blank=True, on_delete=models.SET_NULL
+Name |name | CharField | max_length=254
+Email | email | EmailField
+Body |body| TextField 
+Date_added | date_added | DateTimeField | auto_now_add=True
+
+
+### Subscribe App
+
+#### Subscribe Model
+
+| **Name** | **Database Key** | **Field Type** | **Validation** |
+--- | --- | --- | ---
+Email | email | EmailField | max_length=254, unique=True
+Date_added | date_added | DateTimeField | auto_now_add=True
