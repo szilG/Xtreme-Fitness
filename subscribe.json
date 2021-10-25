@@ -1,0 +1,1 @@
+[{"model": "subscribe.subscribe", "pk": 13, "fields": {"email": "janedoe@gmail.com", "date_added": "2021-10-25T11:38:08.830Z"}}, {"model": "subscribe.subscribe", "pk": 14, "fields": {"email": "johndoe@gmail.com", "date_added": "2021-10-25T11:38:14.384Z"}}, {"model": "subscribe.subscribe", "pk": 15, "fields": {"email": "hello@gmail.com", "date_added": "2021-10-25T11:38:22.216Z"}}]
