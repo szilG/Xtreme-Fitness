@@ -44,6 +44,15 @@ Xtreme Fitness is Python-Django web application, support by a PostgreSQL (and SQ
 
 - [Mockup](#mockup)
 
+- [Technologies Used](#technologies)
+
+- [Testing](testing)
+
+- [Deployment](deployment)
+
+  - [Local-Deployment](#local-deployment)
+  - [Heroku-Deployment](#local-deployment)
+
 <a name="ux"></a>
 
 ## User Experience (UX)
@@ -244,7 +253,7 @@ Date_added | date_added | DateTimeField | auto_now_add=True
 **Shop Page (All Products)**
 
  - The user begins by seeing the motivation hero image.
- - This page contains the list of programs based on category with image and price.
+ - This page contains the list of products based on category with image and price.
 
 
 **Product Description Page**
@@ -389,3 +398,204 @@ Date_added | date_added | DateTimeField | auto_now_add=True
    - Register
 
    <img src="readme/mockups/register.png" height="300px"/>
+
+
+<div align="right"><a href="#top">🔝</a></div>
+
+<a name="technologies"></a>
+
+## Technologies Used
+
+### Languages Used
+
+-   [HTML5](https://www.w3schools.com/html/)
+-   [CSS3](https://www.w3schools.com/css/)
+-   [JavaScript](https://www.w3schools.com/js/DEFAULT.asp)
+-   [jQuery](https://jquery.com/)
+-   [Python](https://www.python.org/)
+
+### Frameworks, Libraries and Programs Used
+
+-   [Django](https://www.djangoproject.com/)
+-   [Django Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/)
+-   [SQLite](https://docs.djangoproject.com/en/3.1/ref/databases/#sqlite-notes)
+-   [PostgresSQL](https://www.heroku.com/postgres)
+-   [Gunicorn](https://gunicorn.org/)
+-   [Psycopg2](https://pypi.org/project/psycopg2/)
+-   [Bootstrap framework](https://getbootstrap.com/)
+-   [Gitpod](https://www.gitpod.io/)
+-   [Git Version Control](https://git-scm.com/)
+-   [GitHub](https://github.com/)
+-   [Heroku](https://www.heroku.com/)
+-   [Stripe](https://stripe.com/en-se)
+-   [AWS S3 Bucket](https://aws.amazon.com/s3/)
+-   [Gmail](https://www.google.com/intl/sv/gmail/about/#)
+-   [FontAwesome](https://fontawesome.com/)
+
+
+
+<div align="right"><a href="#top">🔝</a></div>
+
+<a name="testing"></a>
+
+## Testing - [find here]()
+
+
+<a name="deployment"></a>
+
+## Deployment
+
+<a name="local-deployment"></a>
+
+### Local Deployment
+
+This project was developed using [Gitpod](https://gitpod.io) as the chosen IDE and [GitHub](https://github.com) as a remote repository. The Project's source files were regularly pushed to the [GitHub Xtreme-Fitness Repository](https://github.com/szilG/Xtreme-Fitness) via the  `main`  branch. To reproduce this project within a local deployement, use the following steps and requirements:
+
+1. Have the following installed in your IDE of choice:
+	 - Git (for version control)
+	 - pip (package installer for Python; pip3 was used at the time of production: October 2020)
+	 - Python3 (the programming language used to produce the backend logic of this project)
+2. Create an account with  [Stripe](https://stripe.com/ie), necessary for payment features in the project.
+3. Use an email provider (I used [Gmail](https://www.google.com/intl/en/gmail/about/#) for this project) and sign in and navigate to the  [Google Account Security](https://myaccount.google.com/security)  page.
+4. Create two-step authentication by creating an App password for your Django app.
+5. Use the same email values to set up your email username and password in the steps below:
+	- Scroll to the top of this repository and click on the "clone or download button".
+	- Decide whether you want to clone the project using HTTPS or an SSH key and do the following:
+    - HTTPS: click on the checklist icon to the right of the URL to copy it
+    - SSH key: first click on 'Use SSH' then click on the same icon as above
+
+6. Return to your IDE and open a new Terminal window.
+7. Change the current working directory to the location where you want the cloned directory.
+8. Enter the following command and press 'Enter' to create your local clone:
+```
+git clone https://github.com/szilG/Xtreme-Fitness.git
+```
+9.  Install the required dependencies with the following command:
+```
+pip3 install -r requirements.txt
+```
+10.  Create an env.py file and add the following, complete with your own values:
+```
+import os
+os.environ['AWS_ACCESS_KEY_ID'] = '<your value>'
+os.environ['AWS_SECRET_ACCESS_KEY'] = '<your value>'
+os.environ['DATABASE_URL'] = '<your value>'
+os.environ['EMAIL_HOST_PASS'] = '<your value>'
+os.environ['EMAIL_HOST_USER'] = '<your value>'
+os.environ['SECRET_KEY'] = '<your value>'
+os.environ['STRIPE_PUBLIC_KEY'] = '<your value>'
+os.environ['STRIPE_SECRET_KEY'] = '<your value>'
+os.environ['STRIPE_WH_SECRET'] = '<your value>'
+os.environ['DEVELOPMENT'] = 'True'
+os.environ['USE_AWS'] = 'True'
+```
+11.  Add your env.py file to .gitignore to make sure your database information is not viewable.
+12. To set up the Django SQLite3 tables required for this project, use the following commands:
+```
+python3 manage.py makemigrations
+python3 manage.py migrate
+```
+13.  After that, create a superuser for your project with the following command and follow the instructions in the Terminal (**note:** this will be necessary to add data to your locally deployed version):
+```
+python3 manage.py createsuperuser
+```
+14.  Your cloned version is now ready to run locally with the following command:
+```
+python3 manage.py runserver
+```
+15.  Once you run your project locally, add '/admin' to the locally deployed project's URL. 
+16. Add categories and products or post and comments to the database.
+
+
+<div align="right"><a href="#top">🔝</a></div>
+
+<a name="heroku-deployment"></a>
+
+### Heroku Deployment
+
+To deploy this project to Heroku, use the following steps as a continuitation from local deployment outlined above:
+
+
+
+
+
+1. Create a [AWS S3 Bucket](https://aws.amazon.com/s3/), as this will be necessary to store static files and media for deployment.
+
+**Set up heroku**
+
+1. Create an account and sign in to [Heroku](https://heroku.com). 
+2. Inside the Heroku Dashboard, create a new app with a unique name and set the region to the closest to you, eg. 'Europe'.
+3. To use the Postgres database for deployment, click 'Resources' tab and under 'Add-ons' seach for 'Heroku Postgres' Select Hobby Dev plan as a free add-on.
+4. In Gitpod, freeze the requirements.txt file (the file is needed for Heroku to know which filed to install) with the following command:
+```
+pip3 freeze --local > requirements.txt
+```
+5. In Gitpod in your env.py set up
+``` 
+
+os.environ['DATABASE_URL'] = '<your Heroku Postgres database url>'
+```
+6. As with local deployment, set up the Postgres database with the following commands:
+```
+python3 manage.py makemigrations
+python3 manage.py migrate
+```
+7. Import Product Data with the following commands:
+```
+python3 manage.py loaddata categories
+python3 manage.py loaddata products
+```
+8. Create new superuser via 
+```
+
+python3 manage.py createsuperuser
+``` 
+and add username, email and password.
+This will be production database for deploying on Heroku.
+
+9. Create a Procfile with the following content (the file is needed for Heroku to know which file is needed as entry point):
+```
+web: gunicorn xtreme_fitness.wsgi:application
+```
+10. In your terminal login to Heroku with:
+```
+
+heroku login 
+```
+than, Disable the static files with:
+```
+
+heroku config:set DISABLE_COLLECTSTATIC=1 --app xtreme-fitness
+```
+11. In settings.py allowd the Host for the Heroku app.
+```
+
+ALLOWED_HOSTS = ['xtreme-fitness.herokuapp.com', 'localhost']
+```
+12. Add and Commit your changes and Push to the GitHub after Pusth to Heroku as well
+```
+
+git add .
+git commit -m "your commit message"
+git push (gitHub push)
+git push heroku master
+```
+13. To automatic deploy click to the Deploy tab and on Deployment method section set it to connect to GitHub than search for the repo and click to connect. Make sure Enable Automatic Deploys.
+14. Go to the 'Settings' tab, click on the 'Reveal Config Variables' button, and input the following values:
+
+| **Key** | **Value** |
+--- | ---
+ AWS_ACCESS_KEY_ID | your AWS bucket ID
+ AWS_SECRET_ACCESS_KEY | your AWS secret key
+ DATABASE_URL | your Heroku Postgres database url
+ EMAIL_HOST_PASS | your password to use your gmail account for emails
+ EMAIL_HOST_USER | your email address
+ SECRET_KEY | secret key used for your Django project (use Secret Key Genarator [like this](https://miniwebtool.com/django-secret-key-generator/))
+ STRIPE_PUBLIC_KEY | obtained through your Stripe account
+ STRIPE_SECRET_KEY | obtained through your Stripe account
+ STRIPE_WH_SECRET | obtained through your Stripe account
+ USE_AWS | True
+
+
+
+
