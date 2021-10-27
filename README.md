@@ -1,5 +1,5 @@
 <h1 align="center">Xtreme Fitness Club<a name="#top"></a></h1>
-<h1 align="center"><img src=""/></h1>
+<h1 align="center"><img src="https://github.com/szilG/Xtreme-Fitness/blob/main/readme/mockups/home.png"/></h1>
 
 <a name="introduction"></a>
 ## Introduction
@@ -42,6 +42,8 @@ Xtreme Fitness is Python-Django web application, support by a PostgreSQL (and SQ
 
 - [Features](#features)
 
+- [Mockup](#mockup)
+
 <a name="ux"></a>
 
 ## User Experience (UX)
@@ -49,7 +51,7 @@ Xtreme Fitness is Python-Django web application, support by a PostgreSQL (and SQ
 <a name="wireframe"></a>
 
 ### Wireframe
-Link to the wireframe on []()
+Link to the wireframe on [here](https://github.com/szilG/Xtreme-Fitness/tree/main/readme/wireframes)
 
 <a name="color-palette"></a>
 
@@ -214,7 +216,7 @@ Date_added | date_added | DateTimeField | auto_now_add=True
 
 #### Specific to the pages
 
-- Home Page
+**Home Page**
 
  - The user begins by seeing the carousel images with a Join Us action button.
  - Then scrolls down to see 3 services section each field is clickable call to action button. 
@@ -224,7 +226,7 @@ Date_added | date_added | DateTimeField | auto_now_add=True
  - Bellow this, the user sees the contact section with a map, contact info and a contact form. That section contains the subscribe newsletter button.
 
 
-- About Page
+**About Page**
 
  - The user begins by seeing the motivation hero image with a caption text.
  - Then scrolls down to see a little about info that features buttons to the trainning plans page.
@@ -233,76 +235,76 @@ Date_added | date_added | DateTimeField | auto_now_add=True
  - Bellow this, another section from the fitness club benefits and the contact us button. That section contains the subscribe newsletter button.
 
 
-- Trainning Plan page (All Trainning)
+**Trainning Plan page (All Trainning)**
 
  - The user begins by seeing the motivation hero image.
  - This page contains the list of programs based on category with image and price.
 
 
-- Shop Page (All Products)
+**Shop Page (All Products)**
 
  - The user begins by seeing the motivation hero image.
  - This page contains the list of programs based on category with image and price.
 
 
-- Product Description Page
+**Product Description Page**
 
  - This page displays product description of selected product with price, rating, size if has any, quantity box and add to bag and keep shopping link.
 
 
-- Contact Page
+**Contact Page**
 
  - The user begins by seeing the motivation hero image with a caption text.
  - This page contains a contact form where users can ask questions. Also the page contains a map and contact information about Xtreme Fitness Club.
  - That page contains the subscribe newsletter button.
 
 
-- Blog Page
+**Blog Page**
 
  - The user begins by seeing the motivation hero image with a caption text.
  - Bellow this, the blog content with image, intro text, the date when it was added and a read more action button.
 
 
-- Blog Details page 
+**Blog Details page**
 
  - The user begins by seeing the blog image on the top.
  - Bellow this, the blog post with a header text, intro text, the date when it was added, and a bake to Blog Home button.
  - Bellow this, the comment section when the users can leave comments for the particular post.
 
 
-- Register Page
+**Register Page**
 
  - This page has signup form. After registration user will reach the sign in page.
  - After sign in the user will reach the home page.
 
 
-- Log In Page
+**Log In Page**
 
  - This page has login form. After login user will reach on home page.
 
 
-- Profile Page
+**Profile Page**
 
  - This page contains user details, delivery info with an update information button and the user order history.
 
 
-- Log Out Page
+**Log Out Page**
 
  - This page has logout form with confirmation Sing Out button to logout. Once signed out, users are redirected back to the Home page.
 
 
-- Product Managment Page 
+**Product Managment Page**
 
  - Only admin can access this page. Admin with superuser privileges can add, edit and delete products, categories from the database.
 
 
-- Bag Page
+**Bag Page**
 
  - This page has list of all products added to the bag with image, price, quantity, delivery info and amount of the total price. 
  Also contains a secure checkout and keep shopping link.
 
 
-- Checkout Page
+**Checkout Page**
 
  - This page contains a form of user details, delivery information and the payment method. Also users can save their delivery information to their profile.
  - Bellow that, a Compate order and a Back button.
@@ -310,13 +312,13 @@ Date_added | date_added | DateTimeField | auto_now_add=True
  - A red overlay with a spinner gif appears after checkout is initiated and while the transaction is being processed and until the checkout success page has fully loaded.
 
 
-- Checkout Success Page
+**Checkout Success Page**
 
  - This page has confirmation Thank You message of your payment for order. This page contains the orders and user deatils and a go back to home page link.
  - Also on the upper right corner toast message appears with a success or failure.
 
 
-- Subscribe Page 
+**Subscribe Page**
 
  - This page has a hero image with a text caption.
  - Bellow that, a call to action text with a header and a paragraph.
@@ -330,3 +332,60 @@ Date_added | date_added | DateTimeField | auto_now_add=True
 - Built in a costumer comment section to the product details page where the costumers can leave feetbacks and images of the product, company, delivery info, ect.
 - Create a clickable timetable where the users can book any classes or cancel their bookings.
 - Create a page with online video tainnings and/or nutrition coaching app.
+
+
+<a name="mockup"></a>
+
+## Mockups
+
+- Mockup made through original website on [Techsini](https://techsini.com/multi-mockup/index.php)
+
+    - Home
+
+   <img src="readme/mockups/home.png" height="300px"/>
+
+
+    - About
+
+
+   <img src="readme/mockups/about.png" height="300px"/>
+
+
+   - Training Plans
+
+   <img src="readme/mockups/all-training-plans.png" height="300px"/>
+
+
+   - Shop
+
+   <img src="readme/mockups/shop.png" height="300px"/>
+
+
+   - Product Details
+
+   <img src="readme/mockups/product-details.png" height="300px"/>
+   <img src="readme/mockups/product-details02.png" height="300px"/>
+
+   - Bag
+
+   <img src="readme/mockups/bag.png" height="300px"/>
+
+   - Contact
+
+   <img src="readme/mockups/contact.png" height="300px"/>
+
+   - Blog
+
+   <img src="readme/mockups/blog.png" height="300px"/>
+
+   - Blog details
+
+   <img src="readme/mockups/blog-details.png" height="300px"/>
+
+   - Login
+
+   <img src="readme/mockups/login.png" height="300px"/>
+
+   - Register
+
+   <img src="readme/mockups/register.png" height="300px"/>
