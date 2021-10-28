@@ -5,7 +5,7 @@
 ## Introduction
 *Xtreme Fitness Club* they are fitness enthusiast who would love to share their love of health and fitness with others.
 The website designed for business purpose offering personal trainning programs, group tranning programs, apparels and nutritional products.
-What more perfect place to purchase these things than a trusted fitness center? The main goal is to make this business venture profitable and .
+What more perfect place to purchase these things than a trusted fitness center? 
 
 This is my final project of four Milestone Projects that make up the Full-Stack Web Development Diploma Training at [Code Institute](https://codeinstitute.net/). The goal of this project was to build a full-stack website with the use of HTML, CSS, JavaScript, Python, Django and a relational database; as well as the implementation of a checkout functionality, which has been achieved through the use of Stripe.
 
@@ -53,6 +53,8 @@ Xtreme Fitness is Python-Django web application, support by a PostgreSQL (and SQ
   - [Local-Deployment](#local-deployment)
   - [Heroku-Deployment](#local-deployment)
 
+- [Credits](#credits)
+
 <a name="ux"></a>
 
 ## User Experience (UX)
@@ -66,14 +68,14 @@ Link to the wireframe on [here](https://github.com/szilG/Xtreme-Fitness/tree/mai
 
 ### Color Palette
 
-<img src="static/colorpallette.jpg" height="300px"/>
+<img src="readme/colorpallette.jpg" height="300px"/>
 
 <a name="app-logo"></a>
 
 ### App Logo
 *Xtreme Fitness Club Favicon*
 
- <img src="static/xfc-favicon.png" height="300px"/>
+ <img src="readme/xfc-favicon.png" height="300px"/>
 
 
 <div align="right"><a href="#top">🔝</a></div>
@@ -83,7 +85,7 @@ Link to the wireframe on [here](https://github.com/szilG/Xtreme-Fitness/tree/mai
 
 ## User Stories
 
-<img src="static/user-stories-ms4.jpg"/>
+<img src="readme/user-stories-ms4.jpg"/>
 
 
 Three main users were created:
@@ -151,7 +153,7 @@ The structure of the apps are inspired by one of Code Institute's mini projects:
 Name | name | CharField | max_length=254
 Friendly Name | friendly_name | CharField | max_length=254, null=True, blank=True
 
-<img src="static/products-app-data-schema.png"/>
+<img src="readme/products-app-data-schema.png"/>
 
 
 <a name="blog-app"></a>
@@ -612,10 +614,10 @@ and for sample configurations, see [Using cross-origin resource sharing (CORS)](
  - Policy type : S3 Bucket Policy
  - Principal:  *
  - Action: Get Object
- - Amazon Resorce Name(ARN): <your ARN name > (You can find in the bucket policy tab).
+ - Amazon Resorce Name(ARN): <your ARN name > (You can find it in the bucket policy tab).
  - Click Add statement than click Generate Policy.
  - Copy that policy into the Bucket policy editor.
- - Add a /* end of the Resource key (that allows access to all resources in the bucket).
+ - Add a ( /* ) to the end of the Resource key (that allows access to all resources in the bucket).
 11. Locate the Access Control List option and click Edit.
  - On Everyone (public Access) tick the list object permision and Save.
 12. Under Services menu go to IAM (allow identity and access management of our stored files and folder).
@@ -645,3 +647,60 @@ and for sample configurations, see [Using cross-origin resource sharing (CORS)](
  STRIPE_SECRET_KEY | obtained through your Stripe account
  STRIPE_WH_SECRET | obtained through your Stripe account
  USE_AWS | True
+
+
+<div align="right"><a href="#top">🔝</a></div>
+
+<a name="credits"></a>
+
+## Credits
+
+### Code
+
+- This project was possible thanks to following the mini-project [Boutique Ado]( https://github.com/mkthewlis/boutique-ado), which was part of the course material while studying with *Code Institute*.
+- [Bootstrap library was used to create a responsive design.](https://getbootstrap.com/docs/5.1/getting-started/introduction/)
+- [Animate.css](https://animate.style/)
+- For newsletter I got inspiration from [MasterCodeOnline](https://www.youtube.com/watch?v=q2B1VpjDjMQ&list=PL_557Q1uZ7gKYcVQtDYFvYONKtwtguF03&index=4)
+- For Blog I was inspired about [Code with Stein](https://www.youtube.com/watch?v=m3hhLE1KR5Q)
+- For custom Alert messages i used [SweetAlert](https://sweetalert.js.org/docs/)
+
+
+### Content
+
+- I was inspired about those sites:
+  - [envato market](https://themeforest.net/item/gym-expert-fitness-gym-html-template/26783766?clickid=V81TFQSU6xyLRwNxiAS6PRWLUkBU-USVNS-tT00&_ga=2.149086262.1687756335.1632150891-93246842.1628010830)
+  - [Activate](https://activate.ie/)
+  - [ClubVitate](https://www.clubvitae.com/corkclayton)
+  - [coachsfitnesscentre](https://www.coachsfitnesscentre.com/)
+
+- Nutritional product images and description came from [hammernutrition](https://www.hammernutrition.eu/)
+- Shop Apperals and Accesories images and description came from [pursuefitness](https://www.pursuefitness.co.uk/)
+- The traning Plans Idea cames from [coachsfitnesscentre](https://www.coachsfitnesscentre.com/)
+
+- Blog Content
+  - [goldsgym](https://www.goldsgym.com/linglestown/blog/setting-smart-fitness-goals/)
+  - [theeverygirl](https://theeverygirl.com/15-realistic-fitness-goals-to-make-this-year-and-exactly-how-to-accomplish-them/)
+  - [fitnessfirs](https://www.fitnessfirst.com.sg/blog/warm-up-and-get-ready-to-move)
+
+### Media
+
+- Images from
+  - [pixabay](https://pixabay.com/images/search/fitness/)
+  - [unsplash](https://unsplash.com/)
+  - [award image](https://expert-themes.com/html/gym/images/resource/award.png)
+  - [fitness couple image](https://expert-themes.com/html/gym/images/resource/about-1.png)
+  - [footer image](https://expert-themes.com/)
+  - [About page our trainer images came from](https://expert-themes.com/)
+
+- Icons from
+  - [font Awesome](https://fontawesome.com/)
+  - [flatIcons](https://www.flaticon.com/)
+  - [favicon](https://favicon.io/favicon-generator/)
+
+### Acknowledgements
+
+- Many Thanks to my mentor **Akshat Garg** for his patience and gentleness, for staying available and supportive through my unique process and giving me important suggestions and feedback of my work. I've learnt a huge amount working with him.
+- To [Code Institute](https://codeinstitute.net/), their team and staff for their fantastic and ongoing 24hour support.
+- Many thanks to my fellow student **Daniella Minyo** she was brilliant and extremely patient😀, she helped me a lot throughout this coding jorney.
+
+> **_NOTE:_** This project was created for educational purposes only.
