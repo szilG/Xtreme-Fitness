@@ -477,9 +477,7 @@ pip3 install -r requirements.txt
 10.  Create an env.py file and add the following, complete with your own values:
 ```
 import os
-os.environ['AWS_ACCESS_KEY_ID'] = '<your value>'
-os.environ['AWS_SECRET_ACCESS_KEY'] = '<your value>'
-os.environ['DATABASE_URL'] = '<your value>'
+os.environ['DATABASE_URL'] = '<your Heroku Postgres database url>'
 os.environ['EMAIL_HOST_PASS'] = '<your value>'
 os.environ['EMAIL_HOST_USER'] = '<your value>'
 os.environ['SECRET_KEY'] = '<your value>'
@@ -487,7 +485,6 @@ os.environ['STRIPE_PUBLIC_KEY'] = '<your value>'
 os.environ['STRIPE_SECRET_KEY'] = '<your value>'
 os.environ['STRIPE_WH_SECRET'] = '<your value>'
 os.environ['DEVELOPMENT'] = 'True'
-os.environ['USE_AWS'] = 'True'
 ```
 11.  Add your env.py file to .gitignore to make sure your database information is not viewable.
 12. To set up the Django SQLite3 tables required for this project, use the following commands:
@@ -515,13 +512,6 @@ python3 manage.py runserver
 
 To deploy this project to Heroku, use the following steps as a continuitation from local deployment outlined above:
 
-
-
-
-
-1. Create a [AWS S3 Bucket](https://aws.amazon.com/s3/), as this will be necessary to store static files and media for deployment.
-
-**Set up heroku**
 
 1. Create an account and sign in to [Heroku](https://heroku.com). 
 2. Inside the Heroku Dashboard, create a new app with a unique name and set the region to the closest to you, eg. 'Europe'.
@@ -585,8 +575,6 @@ git push heroku master
 
 | **Key** | **Value** |
 --- | ---
- AWS_ACCESS_KEY_ID | your AWS bucket ID
- AWS_SECRET_ACCESS_KEY | your AWS secret key
  DATABASE_URL | your Heroku Postgres database url
  EMAIL_HOST_PASS | your password to use your gmail account for emails
  EMAIL_HOST_USER | your email address
@@ -594,8 +582,66 @@ git push heroku master
  STRIPE_PUBLIC_KEY | obtained through your Stripe account
  STRIPE_SECRET_KEY | obtained through your Stripe account
  STRIPE_WH_SECRET | obtained through your Stripe account
+
+
+### AWS Bucket
+
+This project to work you need a cloud-based storage service like AWS S3 accont this will be necessary to store static files and media for deployment.
+
+1. Go to [AWS S3 Bucket](https://aws.amazon.com/s3/) and Create an accont. 
+2. Fill out the form with your credentials.
+3. Once your accont is created go back to [AWS S3 Bucket](https://aws.amazon.com/s3/) and Sign-in (upper rigth). 
+4. On AWS Managnemt Console find or search for S3. Than click on it.
+
+   <img src="readme/aws/managment-console.png" height="300px"/>
+
+5. Create a bucket with a name (best practice naming your bucket to match your Heroku app name), choose the region the one closest to you and MAKE SURE uncheck Block All Publick Access (it's need to public to allow public access to the static files). Click Create bucket.
+
+   <img src="readme/aws/create-bucket.png" height="300px"/>
+
+6. Click on the newly created bucket than click the properties tab. 
+7. Locate the static Website Hosting option and click on Edit.
+8. Turn on Static Website Hosting, that will give a new endpoint to access it from the internet. Input index.html to the Index Document field and error.html to the Error Document field (default values). Save the changes. 
+
+   <img src="readme/aws/static-hosting.png" height="300px"/>
+
+9. Click to the Permissions tab and locate the Cross-origin resource sharing (CORS) option and click Edit.
+Find more info [Cross-Origin Resource Sharing (CORS)](https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/cors.html),
+and for sample configurations, see [Using cross-origin resource sharing (CORS)](https://docs.aws.amazon.com/AmazonS3/latest/userguide/cors.html#how-do-i-enable-cors)
+10. Click to the Bucket Policy tab and select policy generator and create a security policy for this bucket.
+ - Policy type : S3 Bucket Policy
+ - Principal:  *
+ - Action: Get Object
+ - Amazon Resorce Name(ARN): <your ARN name > (You can find in the bucket policy tab).
+ - Click Add statement than click Generate Policy.
+ - Copy that policy into the Bucket policy editor.
+ - Add a /* end of the Resource key (that allows access to all resources in the bucket).
+11. Locate the Access Control List option and click Edit.
+ - On Everyone (public Access) tick the list object permision and Save.
+12. Under Services menu go to IAM (allow identity and access management of our stored files and folder).
+ - In the left side menu Click on Groups and than Create a new group.
+ - In the left side menu Click on Policy.
+ - Click on Create Policy and choose the Json tab and click on to import manage policy. 
+ - Search for S3 than choose AmazonS3FullAccess than import.
+ - Click Review policy give a neme and description than click create policy.
+  (Your policy is created, attach that policy to your group)
+ - Go to Groups and click your group, after find and click Attach policy button. Search for the policy just you created then select and then click attach policy.
+ - In the left side menu Click on Users and Add Users.
+ - Create a user and Access Type: Programmatic Access click next.
+ - Under Add user to group section just tick your group name and click next on and finish with click on Create User. 
+ - Then it generates a downlaodable zip file (Donwload.csv) containing ID and KEY to use for the newly added group. This ID and KEY as to be stored in your env.py file and in Heroku Config Vars. **Download and keep it safe**
+13. Back in your Gitpod in the settings.py file change the AWS_STORAGE_BUCKET_NAME to your bucket name, the AWS_S3_REGION_NAME to your region.
+14. On Heroku go to Settings and click on Config Vars and add your AWS keys to the config variables (you can find your keys in the Downloaded zip file) and add USE_AWS and set it true. Remove the DISABLE_COLLECTSTATIC variable.
+
+| **Key** | **Value** |
+--- | ---
+ AWS_ACCESS_KEY_ID | your AWS bucket ID
+ AWS_SECRET_ACCESS_KEY | your AWS secret key
+ DATABASE_URL | your Heroku Postgres database url
+ EMAIL_HOST_PASS | your password to use your gmail account for emails
+ EMAIL_HOST_USER | your email address
+ SECRET_KEY | secret key used for your Django project 
+ STRIPE_PUBLIC_KEY | obtained through your Stripe account
+ STRIPE_SECRET_KEY | obtained through your Stripe account
+ STRIPE_WH_SECRET | obtained through your Stripe account
  USE_AWS | True
-
-
-
-
