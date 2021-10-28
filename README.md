@@ -704,3 +704,5 @@ and for sample configurations, see [Using cross-origin resource sharing (CORS)](
 - Many thanks to my fellow student **Daniella Minyo** she was brilliant and extremely patient😀, she helped me a lot throughout this coding jorney.
 
 > **_NOTE:_** This project was created for educational purposes only.
+
+<div align="right"><a href="#top">🔝</a></div>
