@@ -792,10 +792,6 @@ input[name='q']::placeholder {
       background: none;
 }
 
-.send-message-btn button p {
-      margin-bottom: 0;
-}
-
 .send-message-btn button:hover {
       border: 2px solid #ff0000;
       background: #ff0000;
@@ -819,7 +815,6 @@ input[name='q']::placeholder {
 
 .swal-modal {
       background-color: rgba(0,0,0,0.8);
-
 }
 
 .swal-icon--success__hide-corners {
@@ -1301,7 +1296,7 @@ span.badge:hover {
       width: 100%;
 }
 
-.service-box figure {
+.service-box img {
       float: left;
       width: 100%;
 }
