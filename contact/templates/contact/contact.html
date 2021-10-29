@@ -118,6 +118,7 @@
 {% endblock %}
 
 {% block postloadjs %}
+{{ block.super }}
       <!--EmailJs-->
       <script src="{% static 'js/sendEmail.js' %}"></script>
 {% endblock %}
