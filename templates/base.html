@@ -41,7 +41,7 @@
       <!--Anime js-->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
       <!--Email JS-->
-      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
       <script>
             (function() {
             emailjs.init("user_kubWAs5UzOaovudWdYgFm");
@@ -201,7 +201,7 @@
 
       {% block postloadjs %}
       <!--Bootstrap toast-->
-      <script type="text/javascript">
+      <script>
             $('.toast').toast('show');
       </script>
 
@@ -214,7 +214,7 @@
       
       {{ block.super }}
       <!--Back to top btn-->
-      <script type="text/javascript">
+      <script>
             $('.btt-link').click(function(e) {
                   window.scrollTo(0,0)
             })
