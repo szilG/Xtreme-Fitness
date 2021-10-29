@@ -15,6 +15,6 @@ class Migration(migrations.Migration):
             model_name='comment',
             name='post',
             field=models.ForeignKey(
-                blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='comments', to='blog.post'),
+                blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='comments', to='blog.post'), # noqa
         ),
     ]

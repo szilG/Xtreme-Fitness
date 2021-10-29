@@ -5,11 +5,11 @@ class Post(models.Model):
     title = models.CharField(max_length=254)
     slug = models.SlugField()
     intro = models.TextField()
-    image_url = models.URLField(max_length=1024, null=True, blank=True)
+    image_url = models.URLField(max_length=1024, null=True, blank=True) # noqa
     image = models.ImageField(null=True, blank=True)
     body = models.TextField()
-    body_sub_header = models.TextField(null=True, blank=True)
-    body_text = models.TextField(null=True, blank=True)
+    body_sub_header = models.TextField(null=True, blank=True) # noqa
+    body_text = models.TextField(null=True, blank=True) # noqa
     date_added = models.DateTimeField(auto_now_add=True)
 
     class Meta:
@@ -19,7 +19,7 @@ class Post(models.Model):
 
 class Comment(models.Model):
     post = models.ForeignKey(
-        Post, related_name='comments', null=True, blank=True, on_delete=models.SET_NULL)
+        Post, related_name='comments', null=True, blank=True, on_delete=models.SET_NULL) # noqa
     name = models.CharField(max_length=254)
     email = models.EmailField()
     body = models.TextField()

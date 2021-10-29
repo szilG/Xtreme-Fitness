@@ -13,16 +13,16 @@ class UserProfile(models.Model):
     delivery information and order history
     """
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    default_phone_number = models.CharField(
+    default_phone_number = models.CharField( # noqa
           max_length=20, null=True, blank=True)
-    default_street_address1 = models.CharField(
+    default_street_address1 = models.CharField( # noqa
           max_length=80, null=True, blank=True)
-    default_street_address2 = models.CharField(
+    default_street_address2 = models.CharField( # noqa
           max_length=80, null=True, blank=True)
-    default_town_or_city = models.CharField(
+    default_town_or_city = models.CharField( # noqa
           max_length=40, null=True, blank=True)
-    default_county = models.CharField(max_length=80, null=True, blank=True)
-    default_postcode = models.CharField(max_length=20, null=True, blank=True)
+    default_county = models.CharField(max_length=80, null=True, blank=True) # noqa
+    default_postcode = models.CharField(max_length=20, null=True, blank=True) # noqa
     default_country = CountryField(
           blank_label='Country', null=True, blank=True)
 

@@ -13,11 +13,11 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='post',
             name='body_sub_header',
-            field=models.TextField(blank=True, null=True),
+            field=models.TextField(blank=True, null=True), # noqa
         ),
         migrations.AddField(
             model_name='post',
             name='body_text',
-            field=models.TextField(blank=True, null=True),
+            field=models.TextField(blank=True, null=True), # noqa
         ),
     ]

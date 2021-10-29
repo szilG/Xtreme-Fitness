@@ -14,12 +14,15 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Post',
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.BigAutoField(
+                    auto_created=True, primary_key=True, serialize=False, verbose_name='ID')), # noqa
                 ('title', models.CharField(max_length=254)),
                 ('slug', models.SlugField()),
                 ('intro', models.TextField()),
-                ('image_url', models.URLField(blank=True, max_length=1024, null=True)),
-                ('image', models.ImageField(blank=True, null=True, upload_to='')),
+                ('image_url', models.URLField( # noqa
+                    blank=True, max_length=1024, null=True)),
+                ('image', models.ImageField(
+                    blank=True, null=True, upload_to='')),
                 ('body', models.TextField()),
                 ('date_added', models.DateTimeField(auto_now_add=True)),
             ],

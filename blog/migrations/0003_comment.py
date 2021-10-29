@@ -14,12 +14,14 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Comment',
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.BigAutoField(
+                    auto_created=True, primary_key=True, serialize=False, verbose_name='ID')), # noqa
                 ('name', models.CharField(max_length=254)),
                 ('email', models.EmailField(max_length=254)),
                 ('body', models.TextField()),
                 ('date_added', models.DateTimeField(auto_now_add=True)),
-                ('post', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='comments', to='blog.post')),
+                ('post', models.ForeignKey(
+                    on_delete=django.db.models.deletion.CASCADE, related_name='comments', to='blog.post')), # noqa
             ],
             options={
                 'ordering': ['date_added'],

@@ -1,9 +1,5 @@
 from django.shortcuts import render
 from django.contrib import messages
-from django.contrib.auth.models import User
-from django.http import HttpResponseRedirect
-
-from .models import Subscribe
 from .forms import SubscriberForm
 
 
