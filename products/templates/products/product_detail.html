@@ -108,7 +108,7 @@
                   <div class="col-10 offset-1">
                         {% if product.long_description %}
                         <div class="p-long-des">
-                              <p>{{ product.long_description }}</p>
+                              <p>{{ product.long_description | safe }}</p>
                         </div>
                         {% endif %}
 
@@ -118,8 +118,8 @@
             <div class="row">
                   <div class="col-4 offset-4">
                         {% if product.image_2 %}
-                              <a href="{{ product.image_2 }}" target="_blank">
-                                    <img class="card-img-top img-fluid" src="{{ product.image_2 }}" alt="{{ product.name }}">
+                              <a href="{{ product.image_2.url }}" target="_blank">
+                                    <img class="card-img-top img-fluid" src="{{ product.image_2.url }}" alt="{{ product.name }}">
                               </a>
                         {% endif %}
                   </div>
