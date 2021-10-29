@@ -720,10 +720,6 @@ input[name='q']::placeholder {
       margin-bottom: 40px;
 }
 
-/* .contact-form-section .title-column .inner-column {
-      position: relative;
-} */
-
 .contact-form-section .title-column .section-title {
       margin-bottom: 20px;
 }
@@ -732,10 +728,6 @@ input[name='q']::placeholder {
       position: relative;
       margin-bottom: 40px
 }
-
-/* .contact-form-section .form-column .inner-column {
-      position: relative;
-} */
 
 .form {
       position: relative;
@@ -1054,6 +1046,11 @@ span.badge:hover {
       margin-right: 10px; 
 }
 
+.p-long-des {
+      padding-top: 10px;
+      padding-bottom: 50px;
+      line-height: 2rem;
+}
 
 /*=================Bag=====================*/
 .table a {
@@ -1067,10 +1064,6 @@ span.badge:hover {
 .remove-item:hover {
       color: #ff0000;
       border-bottom: #ff0000 1px solid;
-}
-
-.update-link:hover {
-      
 }
 
 /*=================Bootstrap toasts================ */
@@ -1717,9 +1710,6 @@ span.badge:hover {
             left: 0;
             z-index: 9999;
       }
-      /* .header-container {
-      padding-top: 164px;
-      } */
       .navbar-brand h2 span{
             font-size: 50px;
             color: #ff0000;
@@ -1790,11 +1780,9 @@ span.badge:hover {
       .carousel-caption {
             top: 30%;
       }
-      
       .bg-custom h1 {
             font-size: 16px;
       }
-      
       .bg-custom h2 {
             font-size: 15px;
       }
