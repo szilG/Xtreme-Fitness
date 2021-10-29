@@ -21,14 +21,13 @@ function validate() {
       });
     }
 validate();
-
-           
+      
 function sendMail(name, email, subject, message) {
       emailjs.send("service_4l1t10j", "template_nv8417p", {
-            name: name.value,
-            email: email.value,
-            subject: subject.value,
-            message: message.value,
+            name: name,
+            email: email,
+            subject: subject,
+            message: message,
       })
       
 }
