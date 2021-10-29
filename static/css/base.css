@@ -509,7 +509,7 @@ input[name='q']::placeholder {
 .member-btn a:hover {
       color: #ff0000;
       border: 1px solid #ff0000;
-      transform: transition .3s ease;
+      transition: .3s ease;
 }
 
 /*---------Testimonials Section------*/
@@ -802,9 +802,10 @@ input[name='q']::placeholder {
       color: #fff;
 }
 
+/*-------SweetAlert Buttons-------*/
 .swal-button {
       padding: 7px 19px;
-      border-radius: none !important;
+      border-radius: 0 !important;
       background-color: #ff0000;
       font-size: 12px;
       text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
