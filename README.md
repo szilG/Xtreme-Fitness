@@ -150,6 +150,8 @@ The structure of the apps are inspired by one of Code Institute's mini projects:
  Long_description | long_description | TextField | null=True, blank=True
  Image_2 | image_2 | ImageField | null=True, blank=True
 
+**NOTE:** Only <em>Nutrition Products</em> has long_description and image_2, but it can be fill in in a future time.
+
 #### Category Model
 
 | **Name** | **Database Key** | **Field Type** | **Validation** |
