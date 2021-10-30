@@ -12,6 +12,7 @@
   - [Compatibility Testing](#compatibility-testing)
   - [Performance Testing](#performance-testing)
   - [User Stories](#user-stories)
+  - [DAST](#dast)
 
 - [Validator](#validator)
   - [CSS3 validator](#css3-validator)
@@ -354,6 +355,21 @@
       - I can Delete Category only in Django Admin panel.
 
 
+
+
+<a name="dast"></a>
+
+### DAST(Dynamec Application Security Testing) tool (AppScan).
+
+The web application has been tested with a DAST (Dynamec Application Security Testing) tool (AppScan).
+See detailed report in the attachment ( heroku Security Report ).
+**The findings need to be validated to filter out false positives.**
+Recomended fixes are also in the report.
+
+
+While the validation of findings, and applying the fixes is out of scope for the project, it can be a good side project.
+
+[Click here to view Security Report.](https://github.com/szilG/Xtreme-Fitness/blob/main/readme/testing/heroku%20Security%20Report.pdf)
 
 
 
