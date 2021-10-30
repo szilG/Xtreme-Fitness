@@ -195,4 +195,132 @@ Test result : No Error
 
     - Log-in and Log-out:
       - Log-In pages.  - I can Log-in to my profile. 
-      - Log-out page.  - I can Log-out.
+      - Log-out page.  - When I click to Log-out a log-out page opens and ask me to Log-out.
+  
+    - Receive confirmation email after registering:
+
+      <img src="readme/testing/confirm01.png" height="300px"/>
+
+      <img src="readme/testing/confirm02.png" height="300px"/>
+
+      <img src="readme/testing/confirm03.png" height="300px"/>
+
+      <img src="readme/testing/confirm04.png" height="300px"/>
+
+
+    - Recover password if forgotten:
+
+      <img src="readme/testing/reset01.png" height="300px"/>
+
+      <img src="readme/testing/reset02.jpg" height="300px"/>
+
+      <img src="readme/testing/reset03.png" height="300px"/>
+
+      <img src="readme/testing/reset04.png" height="300px"/>
+
+    - Have a personalized user profile:
+      - View personal order history and order confirmation and save my payment information.
+      - I can see my address details which I can update.
+    
+    - Sort the list of available products:
+      - Identify the best rated, best priced and categorically sorted products.
+
+      <img src="readme/testing/sort01.png" height="300px"/>
+
+      <img src="readme/testing/sort02.png" height="300px"/>
+
+      <img src="readme/testing/sort03.png" height="300px"/>
+
+      <img src="readme/testing/sort04.png" height="300px"/>
+
+      <img src="readme/testing/sort05.png" height="300px"/>
+
+      <img src="readme/testing/sort06.png" height="300px"/>
+
+      <img src="readme/testing/sort07.png" height="300px"/>
+
+      <img src="readme/testing/sort08.png" height="300px"/>
+
+    - Sort a specific category of product:
+      - Find the best-priced or best-rated product in a specific category or sort the products by category name.
+        - Training Plans :
+
+          <img src="readme/testing/training-plan-category01.png" height="300px"/>
+
+          <img src="readme/testing/training-plan-category01.png" height="300px"/>
+
+          <img src="readme/testing/training-plan-category01.png" height="300px"/>
+
+        
+        - Shop:
+
+          <img src="readme/testing/shop-category01.png" height="300px"/>
+
+          <img src="readme/testing/shop-category02.png" height="300px"/>
+
+          <img src="readme/testing/shop-category03.png" height="300px"/>
+
+          <img src="readme/testing/shop-category04.png" height="300px"/>
+
+
+    - Search for a product by name or description:
+      - Find a specific product I’d like to purchase.    
+
+
+    - See what I’ve searched for and the number of results:
+      - Easily see whether the product I want is available.
+
+    - Select the size and quantity of a product when purchasing it:
+      - Ensure that no mistakes are made by accident during the selection of products, quantity and size.
+
+          <img src="readme/testing/select-box01.png" height="300px"/>
+
+    - View item in shopping bag to be purchase:
+      - Identify total items, quantity, sizes and total costs of purchase before checkout.
+
+          <img src="readme/testing/shopping-bag.png" height="300px"/>
+
+    - Enter payment information:
+      - Easily checkout
+
+          <img src="readme/testing/checkout.png" height="300px"/>
+
+    - View order confirmation after checkout:
+      - Verify that no mistakes were made during order and checkout process.
+
+          <img src="readme/testing/order-confirm.png" height="300px"/>
+
+    - Receive email confirmation after checkout is completed:
+      - Keep the confirmation letter for personal records.
+
+          <img src="readme/testing/recive-email.png" height="300px"/>
+
+
+- Site Owner
+
+    - Add new products/categories:
+      - I can add Products to a specific category.
+
+         <img src="readme/testing/prod-man01.png" height="300px"/>
+
+         <img src="readme/testing/prod-man02.png" height="300px"/>
+
+      - I can add Category only in Django Admin panel.
+
+    - Edit / Update products/categories:
+      - I can Edit and Update Products of specific category.
+
+         <img src="readme/testing/prod-man03.png" height="300px"/>
+      
+      - I can Edit/Update Category only in Django Admin panel.
+    
+    - Delete products/categories:
+      - I can Delete Products of specific category.
+
+         <img src="readme/testing/prod-man04.png" height="300px"/>
+
+         <img src="readme/testing/prod-man05.png" height="300px"/>
+
+      - I can Delete Category only in Django Admin panel.
+
+
