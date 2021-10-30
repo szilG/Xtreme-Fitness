@@ -53,6 +53,8 @@ Xtreme Fitness is Python-Django web application, support by a PostgreSQL (and SQ
   - [Local-Deployment](#local-deployment)
   - [Heroku-Deployment](#local-deployment)
 
+- [Known Bugs](#known-bugs)
+
 - [Credits](#credits)
 
 <a name="ux"></a>
@@ -376,8 +378,10 @@ Date_added | date_added | DateTimeField | auto_now_add=True
 
    - Product Details
 
-   <img src="readme/mockups/product-details.png" height="300px"/>
-   <img src="readme/mockups/product-details02.png" height="300px"/>
+    <img src="readme/mockups/product-details.png" height="300px"/>
+    
+
+    <img src="readme/mockups/product-details02.png" height="300px"/>
 
    - Bag
 
@@ -510,6 +514,7 @@ python3 manage.py runserver
 
 
 <div align="right"><a href="#top">🔝</a></div>
+
 
 <a name="heroku-deployment"></a>
 
@@ -654,7 +659,19 @@ and for sample configurations, see [Using cross-origin resource sharing (CORS)](
 
 <div align="right"><a href="#top">🔝</a></div>
 
-<a name="credits"></a>
+
+<a name="known-bugs"></a>
+
+## Known Bugs
+
+- The header contains phone number witch is not working howewer I used the correct href.
+    
+    <img src="readme/testing/bag01.png" height="200px"/>
+
+
+
+
+<a name="credits"></a> 
 
 ## Credits
 
