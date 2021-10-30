@@ -1048,6 +1048,11 @@ span.badge:hover {
       line-height: 2rem;
 }
 
+.product-details-container h1{
+      font-size: 20px;
+      font-weight: 600;
+}
+
 /*=================Bag=====================*/
 .table a {
       text-decoration: none;
@@ -1769,6 +1774,11 @@ span.badge:hover {
       }
       .benefit-section {
             margin-bottom: 0;
+      }
+      .product-details-container h1{
+            font-size: 30px;
+            font-weight: 400;
+            margin-top: 50px;
       }
 }
 
