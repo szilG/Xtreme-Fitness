@@ -145,6 +145,8 @@ The structure of the apps are inspired by one of Code Institute's mini projects:
  Rating | rating | DecimalField | max_digits=6, decimal_places=2, null=True, blank=True
  Image URL | image_url | URLField | max_length=300, null=True, blank=True
  Image | image | ImageField | null=True, blank=True
+ Long_description | long_description | TextField | null=True, blank=True
+ Image_2 | image_2 | ImageField | null=True, blank=True
 
 #### Category Model
 
@@ -340,10 +342,10 @@ Date_added | date_added | DateTimeField | auto_now_add=True
 
 ### Features Left to Implement
 
-- Built in a costumer comment section to the product details page where the costumers can leave feetbacks and images of the product, company, delivery info, ect.
+- Build in a costumer comment section to the product details page where the costumers can leave feetbacks and images of the product, company, delivery info, ect.
 - Create a clickable timetable where the users can book any classes or cancel their bookings.
 - Create a page with online video tainnings and/or nutrition coaching app.
-
+- Build to sign-in or register with social acconts.
 
 <a name="mockup"></a>
 
@@ -429,10 +431,11 @@ Date_added | date_added | DateTimeField | auto_now_add=True
 -   [Git Version Control](https://git-scm.com/)
 -   [GitHub](https://github.com/)
 -   [Heroku](https://www.heroku.com/)
--   [Stripe](https://stripe.com/en-se)
+-   [Stripe](https://stripe.com/ie)
 -   [AWS S3 Bucket](https://aws.amazon.com/s3/)
--   [Gmail](https://www.google.com/intl/sv/gmail/about/#)
+-   [Gmail](https://www.google.com/intl/ie/gmail/about/#)
 -   [FontAwesome](https://fontawesome.com/)
+-   [EmailJs](https://www.emailjs.com/)
 
 
 
@@ -458,7 +461,7 @@ This project was developed using [Gitpod](https://gitpod.io) as the chosen IDE a
 	 - pip (package installer for Python; pip3 was used at the time of production: October 2020)
 	 - Python3 (the programming language used to produce the backend logic of this project)
 2. Create an account with  [Stripe](https://stripe.com/ie), necessary for payment features in the project.
-3. Use an email provider (I used [Gmail](https://www.google.com/intl/en/gmail/about/#) for this project) and sign in and navigate to the  [Google Account Security](https://myaccount.google.com/security)  page.
+3. Use an email provider (I used [Gmail](https://www.google.com/intl/ie/gmail/about/#) for this project) and sign in and navigate to the  [Google Account Security](https://myaccount.google.com/security)  page.
 4. Create two-step authentication by creating an App password for your Django app.
 5. Use the same email values to set up your email username and password in the steps below:
 	- Scroll to the top of this repository and click on the "clone or download button".
