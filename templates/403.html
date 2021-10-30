@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+      <!--Start Header Image Section-->
+      <div class="about-image">
+            <div><img class="img-fluid w-100" src="{% static '403.jpg' %}" alt="fitness girl"></div>
+      </div>
+      <!--End Header Image Section-->
+                        
+      <div class="container-fluid mb-5">
+        <div class="row">
+            <div class="col-12 col-md-10 offset-md-1">
+                <div class="form-box mt-5 text-center">
+                    <h3>Oops, it looks like there's been an authentication error!</h3>
+                    <p>Sorry, you don’t have the necessary permissions to access the wanted page.</p>
+                    <p class="email-404">If you think that you've ended up here in error, please send us an email at 
+                        <a href="mailto:xfitnessclub21@gmail.com">xfitness21@gmail.com</a> and we'll get back to you soon.</p>
+                    <div class="text-center">
+                        <a class="btn btn-red mb-3 mt-3" href="{% url 'home' %}">Home</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+
+

@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+      <!--Start Header Image Section-->
+      <div class="about-image">
+            <div><img class="img-fluid w-100" src="{% static '500.jpg' %}" alt="fitness girl"></div>
+      </div>
+      <!--End Header Image Section-->
+                        
+      <div class="container-fluid mb-5">
+        <div class="row">
+            <div class="col-12 col-md-10 offset-md-1">
+                <div class="form-box mt-5 text-center">
+                    <h3>Oops, it looks like there's been an internal server error!</h3>
+                    <p class="email-404">If you keep seeing this message, please drop us an email at 
+                        <a href="mailto:xfitnessclub21@gmail.com">xfitness21@gmail.com</a> we'll look in to the issue.</p>
+                    <div class="text-center">
+                        <a class="btn btn-red mb-3 mt-3" href="{% url 'home' %}">Home</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+
