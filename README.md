@@ -449,7 +449,8 @@ Date_added | date_added | DateTimeField | auto_now_add=True
 
 <a name="testing"></a>
 
-## Testing - [find here]()
+## Testing
+[find here](https://github.com/szilG/Xtreme-Fitness/blob/main/TESTING.md)
 
 
 <a name="deployment"></a>
