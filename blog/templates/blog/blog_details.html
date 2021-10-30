@@ -12,11 +12,11 @@
             <div class="auto-container">
                   <div class="row clearfix">
                         <div class="col-lg-10 offset-1">
-                              <div class="" >
+                              <div>
                                     <h2 class="text-center">{{ post.title}}</h2>
                                     <div class="border-top border-danger w-25 mx-auto mt-md-5 mb-md-5"></div>
                                     <h5 class="text-center">{{ post.intro }}</h5>
-                                    <div class="">
+                                    <div>
                                           <div class="text-muted text-center">
                                                 <small>{{ post.date_added }}</small>
                                           </div>
@@ -41,7 +41,7 @@
                               <h2>Comments</h2>
                               {% for comment in post.comments.all %}
                                     <article>
-                                          <div class="">
+                                          <div>
                                                 <p><strong>{{ comment.name }}</strong><small class="ml-2">{{ comment.date_added }}</small> </p>
                                                 <br>
                                                 {{ comment.body }}
@@ -56,7 +56,6 @@
                         </div>
                   </div>
             </div>
-            
       </section>
       <hr>
       <section class="add-comment-section mb-5 mt-3">
