@@ -32,7 +32,6 @@ function sendMail(name, email, subject, message) {
       
 }
 
-
 function emptyerror() {
       swal({
             icon: "error",
@@ -40,14 +39,6 @@ function emptyerror() {
             text: "Fields cannot be empty!",
       });
       }
-
-function error() {
-      swal({
-            icon: "error",
-            title: "Oops...",
-            text: "Something went wrong!",
-      });
-}
 
 function success() {
       swal({
