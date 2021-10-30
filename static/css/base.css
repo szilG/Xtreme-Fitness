@@ -1677,6 +1677,10 @@ span.badge:hover {
       padding-right: 10px;
 }
 
+.email-404 a {
+      text-decoration: none;
+      color: #555555;
+}
 
 /*=================Media queries===================*/
 
