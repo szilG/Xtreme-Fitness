@@ -168,3 +168,31 @@ Test result : No Error
 
     - Sign-In page Desktop and Mobile
       <img src="readme/testing/signin-lighthouse.jpg" height="300px"/>
+
+
+#### Testing User Stories
+
+- Generic User, Shopper, Site User
+
+  - I easily understand the purpose and the layout of the site without additional instructions needed.
+  - All pages of website has navigation bar, search box and footer.
+  - With navigation bar I can easily access diiferent page and go anywhere from present page and come back.
+  - Footer has social link. If I click on link it open the relevant page on different tab so I can easily check the social activity.
+  - I am able to use the website on any device.
+
+    - View a list of products:
+      - Training page(all) - I get all training plans of the Fitness club.
+      - Shop page(all). - I get all shopping products of the Fitness club.
+
+    - View individual product details:
+      - Product_details. -  I can see product description of specific product.
+
+    - Easily view the total of my purchases at any time:
+      - On all pages.  - I can see the bag icon in the rigth corner with my total amont of the purchases.
+
+    - Register for an accont:
+      - Register pages.  - Have a personal accont and view my profile.
+
+    - Log-in and Log-out:
+      - Log-In pages.  - I can Log-in to my profile. 
+      - Log-out page.  - I can Log-out.
