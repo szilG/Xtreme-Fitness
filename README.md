@@ -14,7 +14,7 @@ Xtreme Fitness is Python-Django web application, support by a PostgreSQL (and SQ
 **NOTE:** If you would like to test the payment functionality of this project, NO NEED to create an account. Use the card number 4242 4242 4242 4242 with ANY address details, expiry date and CVC that you choose.
 
 
-[Click here to view the project live.](https://xtreme-fitness.herokuapp.com/)
+[Click here to view the project live.](https://xtreme-fitness.onrender.com)
 
 
 <div align="right"><a href="#top">🔝</a></div>
